@@ -19,6 +19,7 @@ body {
   height: 100px;
   width: 100vw;
   z-index: 1000;
+  position: fixed;
 
 }
 
