@@ -499,12 +499,14 @@ html {
   font-family: Just tell me what;
   font-size: 64px;
   line-height: 40px;
+  opacity: 0;
 }
 
 .get-started-container p {
   font-family: Poppins;
   font-size: 24px;
   width: 400px;
+  opacity: 0;
 }
 
 .get-started-container button {
@@ -520,6 +522,7 @@ html {
   justify-content: center;
   gap: 5px;
   transition: all 0.3s;
+  opacity: 0;
 }
 
 .get-started-container a {
@@ -556,6 +559,39 @@ html {
   height: 540px;
   border-radius: 6px;
   box-shadow: 2px 4px 12px 6px rgba(0, 0, 0, 0.24);
+  opacity: 0;
+}
+
+@keyframes slideUpFadeIn {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-center {
+  animation: slideUpFadeIn 0.5s ease-out forwards;
+}
+
+.animate-left {
+  animation: slideInLeft 0.5s ease-out forwards;
 }
 
 @media (max-width: 990px) {

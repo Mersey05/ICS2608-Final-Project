@@ -469,8 +469,6 @@ html {
   }
 }
 
-
-
 .successful-bg {
   background-color: #c7bebe37;
   width: 500px !important;
@@ -480,6 +478,7 @@ html {
   border-radius: 12px;
   box-shadow: 3px 4px 4px 0px rgba(0, 0, 0, 0.35);
   margin-bottom: 50px;
+  opacity: 0;
 }
 
 .successful-info {
@@ -547,6 +546,22 @@ html {
   /* Slightly shrink button on click */
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
   /* Reduced shadow */
+}
+
+@keyframes slideUpFadeIn {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-center {
+  animation: slideUpFadeIn 0.5s ease-out forwards;
 }
 
 @media (max-width: 1024px) {
