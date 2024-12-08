@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book an Event</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/bookingPage/booking.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="mainNav">
+        <div class="container mainNavContainer">
+          <ul class="container navContainerLeft">
+            <img
+              class="navbar-toggler menuLine"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+              src="images/HomePage/Icons/menu-line.png"
+              alt=""
+            />
+            <div class="container navItemsLeft">
+              <li class="navItems">
+                <a href="home.html">HOME</a>
+              </li>
+              <li class="navItems"><a href="">ABOUT</a></li>
+              <li class="navItems"><a href="">PRODUCTS</a></li>
+            </div>
+          </ul>
+          <div class="container logoContainer">
+            <img
+              class="logoImage"
+              src="images/HomePage/Photos/Calle Mush_s Logo.png"
+              alt=""
+            />
+          </div>
+          <ul class="container navContainerRight">
+            <li class="navItems contacts"><a href="">CONTACTS</a></li>
+            <a href="booking.html">
+              <button class="bookButton">
+                <img
+                  class="bookingIcon"
+                  src="images/HomePage/Icons/Booking-Icon.png"
+                  alt=""
+                />
+                <span class="bookButtonText">Book an Event</span>
+              </button></a
+            >
+          </ul>
+        </div>
+      </nav>
+      <div
+        class="offcanvas offcanvas-start ipadSidebar"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="container sidebarTop">
+          <div class="container sideLogoContainer">
+            <img
+              class="sideLogoImage"
+              src="images/HomePage/Photos/Calle Mush_s Logo.png"
+              alt=""
+            />
+          </div>
+          <div class="container sideBarText">
+            <p class="sideBarMain">CALLE MUSH</p>
+            <p class="sideBarSub">Explore now!</p>
+          </div>
+        </div>
+        <div class="container sideBarContainer">
+          <div class="container sideBarItems">
+            <ul>
+              <li>
+                <a href="home.html"
+                  ><img src="images/HomePage/Icons/Home.png" alt="" />Home</a
+                >
+              </li>
+              <img src="images/HomePage/Icons/Line 2.png" alt="" />
+              <li>
+                <a href=""
+                  ><img src="images/HomePage/Icons/About.png" alt="" />About</a
+                >
+              </li>
+              <img src="images/HomePage/Icons/Line 2.png" alt="" />
+              <li>
+                <a href=""
+                  ><img
+                    src="images/HomePage/Icons/Products.png"
+                    alt=""
+                  />Products</a
+                >
+              </li>
+              <img src="images/HomePage/Icons/Line 2.png" alt="" />
+              <li>
+                <a href=""
+                  ><img
+                    src="images/HomePage/Icons/Contacts.png"
+                    alt=""
+                  />Contacts</a
+                >
+              </li>
+              <img src="images/HomePage/Icons/Line 2.png" alt="" />
+              <li>
+                <a href="booking.html"
+                  ><img src="images/HomePage/Icons/Book.png" alt="" />Book an
+                  Event</a
+                >
+              </li>
+              <img src="images/HomePage/Icons/Line 2.png" alt="" />
+            </ul>
+          </div>
+          <button type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+            Close
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec-1">
+        <div class="container sec-1-info">
+          <div class="container get-started-container">
+            <h1>CALLE MUSH</h1>
+            <p>Perk up your event! — reserve our mobile coffee bar today!</p>
+            <a href="#sec-3">
+              <button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="30"
+                  height="30"
+                  fill="rgba(255,255,255,1)"
+                >
+                  <path
+                    d="M12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2ZM13 12V8H11V12H8L12 16L16 12H13Z"
+                  ></path>
+                </svg>
+                <span>Get Started</span>
+              </button>
+            </a>
+          </div>
+          <div class="container product-container">
+            <img src="images/bookingPage/product-image.jpeg" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="sec-2">
+        <div class="container sec-2-info">
+          <h2>Bringing our mushroom coffee to your perfect spot!</h2>
+        </div>
+      </section>
+      <section class="sec-3" id="sec-3">
+        <div class="container sec-3-info">
+          <h3>EVENT RESERVATION</h3>
+        </div>
+      </section>
+      <section class="sec-4">
+        <div class="container sec-4-info">
+          <img
+            src="images/bookingPage/left-leaf.png"
+            alt=""
+            class="left-leaf-img"
+          />
+          <div class="container form-info">
+            <form action="submit_event">
+              <div class="container form-row-1">
+                <div class="container name-container">
+                  <label for="full-name">Your name</label>
+                  <input type="text" id="full-name" placeholder="Full name" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="rgba(147,147,147,1)"
+                    class="input-icon"
+                  >
+                    <path
+                      d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13Z"
+                    ></path>
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="rgba(208,28,5,1)"
+                    class="input-warning"
+                    hidden
+                  >
+                    <path
+                      d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM11 15V17H13V15H11ZM11 7V13H13V7H11Z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="container email-container">
+                  <label for="email-address">Email Address</label>
+                  <input
+                    type="email"
+                    id="email-address"
+                    placeholder="Enter Email Address"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="rgba(147,147,147,1)"
+                    class="input-icon"
+                  >
+                    <path
+                      d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM12.0606 11.6829L5.64722 6.2377L4.35278 7.7623L12.0731 14.3171L19.6544 7.75616L18.3456 6.24384L12.0606 11.6829Z"
+                    ></path>
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="rgba(208,28,5,1)"
+                    class="input-warning"
+                    hidden
+                  >
+                    <path
+                      d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM11 15V17H13V15H11ZM11 7V13H13V7H11Z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="container form-row-2">
+                <div class="container number-container">
+                  <label for="contact-number">Contact Number</label>
+                  <input
+                    type="text"
+                    id="contact-number"
+                    placeholder="Enter Contact Number"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="rgba(147,147,147,1)"
+                    class="input-icon"
+                  >
+                    <path
+                      d="M7 2V22H3V2H7ZM9 2H19.0049C20.1068 2 21 2.89821 21 3.9908V20.0092C21 21.1087 20.1074 22 19.0049 22H9V2ZM22 6H24V10H22V6ZM22 12H24V16H22V12ZM15 12C16.1046 12 17 11.1046 17 10C17 8.89543 16.1046 8 15 8C13.8954 8 13 8.89543 13 10C13 11.1046 13.8954 12 15 12ZM12 16H18C18 14.3431 16.6569 13 15 13C13.3431 13 12 14.3431 12 16Z"
+                    ></path>
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="rgba(208,28,5,1)"
+                    class="input-warning"
+                    hidden
+                  >
+                    <path
+                      d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM11 15V17H13V15H11ZM11 7V13H13V7H11Z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="container fb-link-container">
+                  <label for="facebook-link">Facebook Link</label>
+                  <input
+                    type="text"
+                    id="facebook-link"
+                    placeholder="Enter Facebook Link"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="rgba(147,147,147,1)"
+                    class="input-icon"
+                  >
+                    <path
+                      d="M12.001 2C6.47813 2 2.00098 6.47715 2.00098 12C2.00098 16.9913 5.65783 21.1283 10.4385 21.8785V14.8906H7.89941V12H10.4385V9.79688C10.4385 7.29063 11.9314 5.90625 14.2156 5.90625C15.3097 5.90625 16.4541 6.10156 16.4541 6.10156V8.5625H15.1931C13.9509 8.5625 13.5635 9.33334 13.5635 10.1242V12H16.3369L15.8936 14.8906H13.5635V21.8785C18.3441 21.1283 22.001 16.9913 22.001 12C22.001 6.47715 17.5238 2 12.001 2Z"
+                    ></path>
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="rgba(208,28,5,1)"
+                    class="input-warning"
+                    hidden
+                  >
+                    <path
+                      d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM11 15V17H13V15H11ZM11 7V13H13V7H11Z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="container form-row-3">
+                <div class="datepicker-container">
+                  <label for="date-input">Date</label>
+                  <input
+                    type="text"
+                    class="date-input"
+                    id="date-input"
+                    placeholder="Select date"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="rgba(147,147,147,1)"
+                    class="input-icon"
+                  >
+                    <path
+                      d="M2 11H22V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V11ZM17 3H21C21.5523 3 22 3.44772 22 4V9H2V4C2 3.44772 2.44772 3 3 3H7V1H9V3H15V1H17V3Z"
+                    ></path>
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="rgba(208,28,5,1)"
+                    class="input-warning"
+                    hidden
+                  >
+                    <path
+                      d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM11 15V17H13V15H11ZM11 7V13H13V7H11Z"
+                    ></path>
+                  </svg>
+
+                  <div class="datepicker" hidden>
+                    <!-- .datepicker-header -->
+                    <div class="datepicker-header">
+                      <button type="button" class="prev">Prev</button>
+
+                      <div>
+                        <select class="month-input">
+                          <option>January</option>
+                          <option>February</option>
+                          <option>March</option>
+                          <option>April</option>
+                          <option>May</option>
+                          <option>June</option>
+                          <option>July</option>
+                          <option>August</option>
+                          <option>September</option>
+                          <option>October</option>
+                          <option>November</option>
+                          <option>December</option>
+                        </select>
+                        <input type="number" class="year-input" />
+                      </div>
+
+                      <button class="next" type="button">Next</button>
+                    </div>
+                    <!-- /.datepicker-header -->
+
+                    <!-- .days -->
+                    <div class="days">
+                      <span>Sun</span>
+                      <span>Mon</span>
+                      <span>Tue</span>
+                      <span>Wed</span>
+                      <span>Thu</span>
+                      <span>Fri</span>
+                      <span>Sat</span>
+                    </div>
+                    <!-- /.days -->
+
+                    <!-- .dates -->
+                    <div class="dates"></div>
+                    <!-- /.dates -->
+
+                    <!-- .datepicker-footer -->
+                    <div class="datepicker-footer">
+                      <button class="cancel" type="button">Cancel</button>
+                      <button class="apply" type="button">Apply</button>
+                    </div>
+                    <!-- /.datepicker-footer -->
+                  </div>
+                </div>
+                <div class="time-picker-container">
+                  <label for="time-input">Time</label>
+                  <input
+                    type="text"
+                    placeholder="Select a Time"
+                    class="time-input"
+                    id="time-input"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="rgba(147,147,147,1)"
+                    class="input-icon"
+                  >
+                    <path
+                      d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM13 12V7H11V14H17V12H13Z"
+                    ></path>
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="rgba(208,28,5,1)"
+                    class="input-warning"
+                    hidden
+                  >
+                    <path
+                      d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM11 15V17H13V15H11ZM11 7V13H13V7H11Z"
+                    ></path>
+                  </svg>
+
+                  <div class="time-picker" hidden>
+                    <div class="time-selector">
+                      <input
+                        type="number"
+                        class="hour-input"
+                        value="12"
+                        min="1"
+                        max="12"
+                      />
+                      <span>:</span>
+                      <input
+                        type="number"
+                        class="minute-input"
+                        value="00"
+                        min="0"
+                        max="59"
+                      />
+                    </div>
+
+                    <div class="time-period">
+                      <button class="period-toggle" type="button">AM</button>
+                    </div>
+
+                    <div class="timepicker-footer">
+                      <button class="cancel-time" type="button">Cancel</button>
+                      <button class="apply-time" type="button">Apply</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container description-container">
+                <label for="description-input">Event Description</label>
+                <textarea
+                  id="description-input"
+                  placeholder="Describe your event here"
+                  maxlength="250"
+                ></textarea>
+                <p id="char-counter">0/250</p>
+              </div>
+              <div
+                class="g-recaptcha"
+                data-sitekey="6LcON5AqAAAAAHwE-w7hnpB8pvcK-iC04c-7a17s"
+              ></div>
+              <br />
+              <div class="submit-container">
+                <button type="submit" value="Submit">
+                  <span>Book Your Event</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="rgba(255,255,255,1)"
+                  >
+                    <path
+                      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+          <img
+            src="images/bookingPage/right-leaf.png"
+            alt=""
+            class="right-leaf-img"
+          />
+          <div class="backdrop"></div>
+          <div class="container otp-container">
+            <div class="container otp-info">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="150"
+                height="150"
+                fill="rgba(213,193,161,1)"
+                class="phone-svg"
+              >
+                <path
+                  d="M6 2H18C18.5523 2 19 2.44772 19 3V21C19 21.5523 18.5523 22 18 22H6C5.44772 22 5 21.5523 5 21V3C5 2.44772 5.44772 2 6 2ZM12 17C11.4477 17 11 17.4477 11 18C11 18.5523 11.4477 19 12 19C12.5523 19 13 18.5523 13 18C13 17.4477 12.5523 17 12 17Z"
+                ></path>
+              </svg>
+              <form action="" id="otp-form">
+                <input type="text" placeholder="Enter OTP" id="otp-input" />
+                <button type="submit" id="otp-submit">Submit</button>
+                <div id="otp-message"></div>
+                <!-- Placeholder for error message -->
+                <a href="">Didn't receive a code? Try again!</a>
+                <button id="go-back">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    fill="rgba(255,255,255,1)"
+                  >
+                    <path
+                      d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"
+                    ></path>
+                  </svg>
+                  <span>Go Back</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footerInfo">
+        <div class="container footerLogo">
+          <img src="images/HomePage/Photos/Footer-Logo.png" alt="" />
+          <p>CALLE MUSH</p>
+        </div>
+        <div class="container footerNav">
+          <div class="container">
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="">Products</a></li>
+            </ul>
+            <ul>
+              <li><a href="">About</a></li>
+              <li><a href="">Contacts</a></li>
+            </ul>
+          </div>
+          <a href="booking.html">
+            <button>
+              <img
+                class="bookingIcon"
+                src="images/HomePage/Icons/Booking-Icon.png"
+                alt=""
+              />
+              <span>Book an Event</span>
+            </button>
+          </a>
+        </div>
+        <div class="container footer-socials">
+          <div class="container">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/profile.php?id=61560478537203"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="48"
+                height="48"
+                fill="rgba(76,59,49,1)"
+              >
+                <path
+                  d="M12.001 2C6.47813 2 2.00098 6.47715 2.00098 12C2.00098 16.9913 5.65783 21.1283 10.4385 21.8785V14.8906H7.89941V12H10.4385V9.79688C10.4385 7.29063 11.9314 5.90625 14.2156 5.90625C15.3097 5.90625 16.4541 6.10156 16.4541 6.10156V8.5625H15.1931C13.9509 8.5625 13.5635 9.33334 13.5635 10.1242V12H16.3369L15.8936 14.8906H13.5635V21.8785C18.3441 21.1283 22.001 16.9913 22.001 12C22.001 6.47715 17.5238 2 12.001 2Z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/calle.mush/profilecard/?igsh=cGV2cGFzNjR6MWQx"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="48"
+                height="48"
+                fill="rgba(76,59,49,1)"
+              >
+                <path
+                  d="M12.001 9C10.3436 9 9.00098 10.3431 9.00098 12C9.00098 13.6573 10.3441 15 12.001 15C13.6583 15 15.001 13.6569 15.001 12C15.001 10.3427 13.6579 9 12.001 9ZM12.001 7C14.7614 7 17.001 9.2371 17.001 12C17.001 14.7605 14.7639 17 12.001 17C9.24051 17 7.00098 14.7629 7.00098 12C7.00098 9.23953 9.23808 7 12.001 7ZM18.501 6.74915C18.501 7.43926 17.9402 7.99917 17.251 7.99917C16.5609 7.99917 16.001 7.4384 16.001 6.74915C16.001 6.0599 16.5617 5.5 17.251 5.5C17.9393 5.49913 18.501 6.0599 18.501 6.74915ZM12.001 4C9.5265 4 9.12318 4.00655 7.97227 4.0578C7.18815 4.09461 6.66253 4.20007 6.17416 4.38967C5.74016 4.55799 5.42709 4.75898 5.09352 5.09255C4.75867 5.4274 4.55804 5.73963 4.3904 6.17383C4.20036 6.66332 4.09493 7.18811 4.05878 7.97115C4.00703 9.0752 4.00098 9.46105 4.00098 12C4.00098 14.4745 4.00753 14.8778 4.05877 16.0286C4.0956 16.8124 4.2012 17.3388 4.39034 17.826C4.5591 18.2606 4.7605 18.5744 5.09246 18.9064C5.42863 19.2421 5.74179 19.4434 6.17187 19.6094C6.66619 19.8005 7.19148 19.9061 7.97212 19.9422C9.07618 19.9939 9.46203 20 12.001 20C14.4755 20 14.8788 19.9934 16.0296 19.9422C16.8117 19.9055 17.3385 19.7996 17.827 19.6106C18.2604 19.4423 18.5752 19.2402 18.9074 18.9085C19.2436 18.5718 19.4445 18.2594 19.6107 17.8283C19.8013 17.3358 19.9071 16.8098 19.9432 16.0289C19.9949 14.9248 20.001 14.5389 20.001 12C20.001 9.52552 19.9944 9.12221 19.9432 7.97137C19.9064 7.18906 19.8005 6.66149 19.6113 6.17318C19.4434 5.74038 19.2417 5.42635 18.9084 5.09255C18.573 4.75715 18.2616 4.55693 17.8271 4.38942C17.338 4.19954 16.8124 4.09396 16.0298 4.05781C14.9258 4.00605 14.5399 4 12.001 4ZM12.001 2C14.7176 2 15.0568 2.01 16.1235 2.06C17.1876 2.10917 17.9135 2.2775 18.551 2.525C19.2101 2.77917 19.7668 3.1225 20.3226 3.67833C20.8776 4.23417 21.221 4.7925 21.476 5.45C21.7226 6.08667 21.891 6.81333 21.941 7.8775C21.9885 8.94417 22.001 9.28333 22.001 12C22.001 14.7167 21.991 15.0558 21.941 16.1225C21.8918 17.1867 21.7226 17.9125 21.476 18.55C21.2218 19.2092 20.8776 19.7658 20.3226 20.3217C19.7668 20.8767 19.2076 21.22 18.551 21.475C17.9135 21.7217 17.1876 21.89 16.1235 21.94C15.0568 21.9875 14.7176 22 12.001 22C9.28431 22 8.94514 21.99 7.87848 21.94C6.81431 21.8908 6.08931 21.7217 5.45098 21.475C4.79264 21.2208 4.23514 20.8767 3.67931 20.3217C3.12348 19.7658 2.78098 19.2067 2.52598 18.55C2.27848 17.9125 2.11098 17.1867 2.06098 16.1225C2.01348 15.0558 2.00098 14.7167 2.00098 12C2.00098 9.28333 2.01098 8.94417 2.06098 7.8775C2.11014 6.8125 2.27848 6.0875 2.52598 5.45C2.78014 4.79167 3.12348 4.23417 3.67931 3.67833C4.23514 3.1225 4.79348 2.78 5.45098 2.525C6.08848 2.2775 6.81348 2.11 7.87848 2.06C8.94514 2.0125 9.28431 2 12.001 2Z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              target="_blank"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=coffee.callemush@gmail.com&su=Inquiry&body=Hello,"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="48"
+                height="48"
+                fill="rgba(76,59,49,1)"
+              >
+                <path
+                  d="M20.7134 8.12811L20.4668 8.69379C20.2864 9.10792 19.7136 9.10792 19.5331 8.69379L19.2866 8.12811C18.8471 7.11947 18.0555 6.31641 17.0677 5.87708L16.308 5.53922C15.8973 5.35653 15.8973 4.75881 16.308 4.57612L17.0252 4.25714C18.0384 3.80651 18.8442 2.97373 19.2761 1.93083L19.5293 1.31953C19.7058 0.893489 20.2942 0.893489 20.4706 1.31953L20.7238 1.93083C21.1558 2.97373 21.9616 3.80651 22.9748 4.25714L23.6919 4.57612C24.1027 4.75881 24.1027 5.35653 23.6919 5.53922L22.9323 5.87708C21.9445 6.31641 21.1529 7.11947 20.7134 8.12811ZM2 4C2 3.44772 2.44772 3 3 3H14V5H4.5052L12 11.662L16.3981 7.75259L17.7269 9.24741L12 14.338L4 7.22684V19H20V11H22V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4Z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <p>
+            Follow us for updates and more! Reach out anytime via our Social
+            Media Platforms
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts/bookingPage/booking.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
