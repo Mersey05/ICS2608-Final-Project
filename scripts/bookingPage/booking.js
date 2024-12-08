@@ -29,6 +29,38 @@ let timePattern = /^(0[1-9]|1[0-2]):[0-5]\d (AM|PM)$/;
 let descriptionPattern = /^.{0,250}$/;
 let otpPattern = /\d{4}/;
 
+window.addEventListener("load", () => {
+  document
+    .querySelector(".product-container img")
+    .classList.add("animate-center");
+  document
+    .querySelector(".get-started-container button")
+    .classList.add("animate-center");
+  document
+    .querySelector(".get-started-container h1")
+    .classList.add("animate-left");
+  document
+    .querySelector(".get-started-container p")
+    .classList.add("animate-left");
+});
+
+const animateOnScroll = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add(entry.target.dataset.animationClass);
+      observer.unobserve(entry.target);
+    }
+  });
+};
+
+const observer = new IntersectionObserver(animateOnScroll, {
+  threshold: 0.05,
+});
+
+document.querySelectorAll(".animate-on-scroll").forEach((element) => {
+  observer.observe(element);
+});
+
 const warningLogos = document.getElementsByClassName("input-warning");
 const inputIcons = document.getElementsByClassName("input-icon");
 
@@ -133,9 +165,9 @@ function hideOtpPopup() {
 }
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  let isValid = true;
+  e.preventDefault(); // Prevent default form submission
 
+  let isValid = true;
   const errors = [];
 
   const captchaResponse = grecaptcha.getResponse();
@@ -144,25 +176,22 @@ form.addEventListener("submit", (e) => {
     isValid = false;
   }
 
-  // Name validation
+  // Validation checks
   if (!namePattern.test(nameInput.value.trim())) {
     errors.push("Please enter a valid full name (letters and spaces only).");
     isValid = false;
   }
 
-  // Email validation
   if (!emailPattern.test(emailInput.value.trim())) {
     errors.push("Please enter a valid email address.");
     isValid = false;
   }
 
-  // Contact number validation
   if (!contactPattern.test(contactInput.value.trim())) {
     errors.push("Please enter a valid contact number.");
     isValid = false;
   }
 
-  // Facebook link validation (optional)
   if (
     facebookInput.value.trim() &&
     !facebookPattern.test(facebookInput.value.trim())
@@ -171,19 +200,16 @@ form.addEventListener("submit", (e) => {
     isValid = false;
   }
 
-  // Date validation
   if (!datePattern.test(dateInput.value.trim())) {
     errors.push("Please enter a valid date in MM/DD/YYYY format.");
     isValid = false;
   }
 
-  // Time validation
   if (!timePattern.test(timeInput.value.trim())) {
     errors.push("Please select a valid time in HH:mm AM/PM format.");
     isValid = false;
   }
 
-  // Description validation
   if (!descriptionPattern.test(descriptionInput.value.trim())) {
     errors.push("Description must be 250 characters or less.");
     isValid = false;
@@ -192,7 +218,24 @@ form.addEventListener("submit", (e) => {
   if (!isValid) {
     alert("Please fix the following errors:\n\n" + errors.join("\n"));
   } else {
+    // Show the OTP pop-up
     showOtpPopup();
+
+    // Submit the form data asynchronously using fetch
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.text())
+      .then((data) => {
+        console.log("Form submitted successfully:", data);
+        // Optionally, handle the success (e.g., show a message or log it)
+      })
+      .catch((error) => {
+        console.error("Error submitting form:", error);
+        alert("An unexpected error occurred. Please try again later.");
+      });
   }
 });
 

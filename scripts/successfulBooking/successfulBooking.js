@@ -16,6 +16,10 @@ window.addEventListener("mousemove", () => {
   nav.classList.remove("hidden");
 });
 
+window.addEventListener("load", () => {
+  document.querySelector(".successful-bg").classList.add("animate-center");
+});
+
 // const currentID = localStorage.getItem("eventID")
 //   ? parseInt(localStorage.getItem("eventID"), 10)
 //   : 1000;
