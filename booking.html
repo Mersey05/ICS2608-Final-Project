@@ -22,6 +22,17 @@
       crossorigin="anonymous"
     />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+      @font-face {
+        font-family: Feeling Passionate;
+        src: url(fonts/Feeling\ Passionate.otf);
+      }
+
+      @font-face {
+        font-family: Just tell me what;
+        src: url(fonts/Just\ tell\ me\ what\ regular.otf);
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -137,7 +148,10 @@
     </header>
 
     <main>
-      <section class="sec-1">
+      <section
+        class="sec-1"
+        style="background-image: url(images/bookingPage/background-start.png)"
+      >
         <div class="container sec-1-info">
           <div class="container get-started-container">
             <h1>CALLE MUSH</h1>
@@ -164,12 +178,21 @@
           </div>
         </div>
       </section>
-      <section class="sec-2">
+      <section
+        class="sec-2"
+        style="background-image: url(images/bookingPage/sec-2-background.png)"
+      >
         <div class="container sec-2-info">
-          <h2>Bringing our mushroom coffee to your perfect spot!</h2>
+          <h2 class="animate-on-scroll" data-animation-class="animate-center">
+            Bringing our mushroom coffee to your perfect spot!
+          </h2>
         </div>
       </section>
-      <section class="sec-3" id="sec-3">
+      <section
+        class="sec-3"
+        id="sec-3"
+        style="background-image: url(images/bookingPage/sec-3-background.png)"
+      >
         <div class="container sec-3-info">
           <h3>EVENT RESERVATION</h3>
         </div>
@@ -182,11 +205,16 @@
             class="left-leaf-img"
           />
           <div class="container form-info">
-            <form action="submit_event">
+            <form action="submit_event.php" method="post">
               <div class="container form-row-1">
                 <div class="container name-container">
                   <label for="full-name">Your name</label>
-                  <input type="text" id="full-name" placeholder="Full name" />
+                  <input
+                    type="text"
+                    id="full-name"
+                    name="full-name"
+                    placeholder="Full name"
+                  />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -219,6 +247,7 @@
                     type="email"
                     id="email-address"
                     placeholder="Enter Email Address"
+                    name="email-address"
                   />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -254,6 +283,7 @@
                     type="text"
                     id="contact-number"
                     placeholder="Enter Contact Number"
+                    name="contact-number"
                   />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -287,6 +317,7 @@
                     type="text"
                     id="facebook-link"
                     placeholder="Enter Facebook Link"
+                    name="facebook-link"
                   />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -323,6 +354,7 @@
                     class="date-input"
                     id="date-input"
                     placeholder="Select date"
+                    name="date-input"
                   />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -408,6 +440,7 @@
                     placeholder="Select a Time"
                     class="time-input"
                     id="time-input"
+                    name="time-input"
                   />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -472,6 +505,7 @@
                   id="description-input"
                   placeholder="Describe your event here"
                   maxlength="250"
+                  name="description-input"
                 ></textarea>
                 <p id="char-counter">0/250</p>
               </div>
