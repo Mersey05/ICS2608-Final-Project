@@ -1,0 +1,4051 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* start of header */
+  .menuLine {
+    display: none;
+  }
+  
+  .mainNav {
+    background-color: #dccfc2;
+    height: 100px;
+    width: 100vw;
+    z-index: 1000;
+    position: fixed;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  
+  
+  .mainNav.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .mainNavContainer {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navContainerLeft {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35% !important;
+    height: 100px;
+  }
+  
+  .navItemsLeft {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navItems a {
+    font-family: Poppins;
+    font-weight: 600;
+    color: #562f22;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .navItems a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2.5px;
+    bottom: 0;
+    left: 0;
+    background-color: #562f22;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .navItems a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .navItems a::after {
+    transform-origin: bottom center;
+  }
+  
+  .navItems a:hover::after {
+    transform-origin: bottom center;
+  }
+  
+  .navItems {
+    list-style: none;
+  }
+  
+  .navContainerRight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35% !important;
+    height: 100px;
+  }
+  
+  .logoContainer {
+    width: 115px !important;
+    height: 115px !important;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logoImage {
+    height: 110px;
+  }
+  
+  .bookButton {
+    background-color: #8e6c57;
+    padding: 7px 15px 7px 15px;
+    border-radius: 30px;
+    border: none;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+  
+  .bookButton:hover {
+    background-color: #856450;
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.1);
+  }
+  
+  .bookButtonText {
+    font-family: Poppins;
+    font-size: 16px;
+    color: white;
+  }
+  
+  .bookingIcon {
+    height: 35px;
+  }
+  
+  .ipadSidebar {
+    width: 50% !important;
+  }
+  
+  .sidebarTop {
+    height: 80px;
+    width: 93% !important;
+    margin-top: 12px;
+    border-radius: 16px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .sideLogoContainer {
+    background-color: #eeeeee;
+    width: 65px !important;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+  .sideBarText {
+    display: flex;
+    height: 80px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .sideLogoImage {
+    height: 75px;
+  }
+  
+  .sideBarMain {
+    font-family: Just tell me what;
+    font-size: 30px;
+    line-height: 28px;
+    margin: 0;
+    margin-top: 6px;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .sideBarSub {
+    font-family: Poppins;
+    font-size: 16px;
+    margin: 0;
+    margin-left: 3px;
+    color: #ba7940;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .sideBarItems {
+    margin-top: 60px;
+  }
+  
+  .sideBarItems ul li {
+    list-style: none;
+    height: 60px;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+  }
+  
+  .sideBarItems ul li:hover {
+    background-color: rgba(211, 211, 211, 0.5);
+  }
+  
+  .sideBarItems ul li a {
+    text-decoration: none;
+    font-family: Poppins;
+    color: black;
+    font-weight: 500;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .sideBarItems ul {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 16px !important;
+  }
+  
+  .sideBarItems ul img {
+    width: 40vw;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .sideBarItems ul li a img {
+    height: 25px;
+    width: 25px;
+    margin-right: 20px;
+    margin-left: 10px;
+  }
+  
+  .sideBarContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sideBarContainer button {
+    margin-top: 20px;
+    padding: 6px 60px 6px 60px;
+    align-self: center;
+    border: none;
+    border-radius: 30px;
+    background-color: #8e6c57;
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  
+  
+  /* end of header */
+  
+  /* header media queries start */
+  @media (max-width: 1024px) {
+    .menuLine {
+      display: flex;
+      transition: all 0.5s !important;
+    }
+  
+    .menuLine:hover {
+      transform: scale(1.18);
+    }
+  
+    .navContainerLeft {
+      display: flex;
+      justify-content: flex-start;
+    }
+  
+    .navItemsLeft {
+      display: none;
+    }
+  
+    .navContainerRight {
+      display: flex;
+      justify-content: flex-end;
+    }
+  
+    .navItems.contacts {
+      display: none;
+    }
+  
+    .ipadSidebar {
+      width: 50% !important;
+    }
+  
+    .sidebarTop {
+      height: 80px;
+      width: 93% !important;
+      margin-top: 12px;
+      border-radius: 16px;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  
+    .sideLogoContainer {
+      background-color: #eeeeee;
+      width: 65px !important;
+      height: 65px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+  
+    .sideBarText {
+      display: flex;
+      height: 80px;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .sideLogoImage {
+      height: 75px;
+    }
+  
+    .sideBarMain {
+      font-family: Just tell me what;
+      font-size: 30px;
+      line-height: 28px;
+      margin: 0;
+      margin-top: 6px;
+      text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+    }
+  
+    .sideBarSub {
+      font-family: Poppins;
+      font-size: 16px;
+      margin: 0;
+      margin-left: 3px;
+      color: #ba7940;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  
+    .sideBarItems {
+      margin-top: 60px;
+    }
+  
+    .sideBarItems ul li {
+      list-style: none;
+    }
+  
+    .sideBarItems ul li a {
+      text-decoration: none;
+      font-family: Poppins;
+      color: black;
+      font-weight: 500;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  
+    .sideBarItems ul {
+      height: 40vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 16px !important;
+    }
+  
+    .sideBarItems ul img {
+      width: 40vw;
+    }
+  
+    .sideBarItems ul li a img {
+      height: 25px;
+      width: 25px;
+      margin-right: 20px;
+    }
+  
+    .sideBarContainer {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .sideBarContainer button {
+      margin-top: 20px;
+      padding: 6px 60px 6px 60px;
+      align-self: center;
+      border: none;
+      border-radius: 30px;
+      background-color: #8e6c57;
+      color: white;
+      font-weight: 400;
+      font-size: 18px;
+      box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+    }
+  
+    .sideBarContainer button:hover {
+      background-color: #695041;
+      box-shadow: 0 0 20px #6fc5ff50;
+      transform: scale(1.1);
+    }
+  }
+  
+  @media (max-width: 725px) {
+    .ipadSidebar {
+      width: 354px !important;
+    }
+  
+    .sideBarItems ul img {
+      width: 291.84px;
+    }
+  
+    .sideBarItems ul li {
+      list-style: none;
+      height: 60px;
+      width: 291.84px;
+      display: flex;
+      align-items: center;
+      transition: 0.3s;
+    }
+  
+    .sideBarItems ul li:hover {
+      background-color: rgba(211, 211, 211, 0.5);
+    }
+  }
+  
+  @media (max-width: 767.2px) {
+    .bookButton {
+      background-color: #8e6c57;
+      padding: 5px 13px 5px 13px;
+      border-radius: 30px;
+      border: none;
+      display: flex;
+      align-items: center;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  
+    .bookButtonText {
+      font-family: Poppins;
+      font-size: 12px;
+      color: white;
+    }
+  
+    .bookingIcon {
+      height: 30px;
+    }
+  }
+  
+  /* header media queries end */
+
+main{
+    padding-top: 100px;
+}
+
+/* Start of About Page */
+
+
+/* About Page Banner Section */
+.About-Page-Banner{
+    overflow-x: hidden !important;
+    overflow-y: hidden;
+    width: 1536px; 
+    display: flex;
+    flex-direction: column;
+
+    background-color: #fee8d0;
+}
+
+.Beans-Background{
+  position: relative;
+}
+
+.Beans-Background img{
+    width: 1536px;
+    height: 530px;
+
+    position: absolute;
+}
+
+/* Animation for Beans Background */
+.Beans-Background img {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+}
+
+/* Upper Part of About Page Banner */
+.Upper-Part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.Calle-Mush-Heading p{
+    font-family: Just tell me what;
+    font-size: 111px;
+    color: #562f22;
+    margin: 15px 0px 0px;
+}
+
+/* Animation for Heading */
+.Calle-Mush-Heading p {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.Calle-Mush-Heading.visible p {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* Bottom Part of About Page Banner */
+.Bottom-Part{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+.Drinks{
+    flex-direction: center;
+    align-items: flex-end;
+    z-index: 1;
+}
+
+/* Drinks Animation */
+.Drinks img {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.Drinks.visible img {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.Mushroom-Coffee-Background{
+    position: absolute;
+    z-index: 0;
+    font-family: Poppins;
+    font-weight: 700;
+    top: -40px;
+    right: 200px;
+    color: #91542e;
+    opacity: 0.19;
+}
+
+.Mushroom-Coffee-Background p:first-child{
+    font-size: 151px;
+    margin: 0;
+    letter-spacing: 21px;
+}
+
+.Mushroom-Coffee-Background p:last-child{
+    position: absolute;
+    font-size: 190px;
+    margin: 0;
+    left: 70px;
+    top: 120px;
+    letter-spacing: 43px;
+}
+
+/* Mushroom Coffee Background Animations */
+.Mushroom-Coffee-Background p:first-child {
+  opacity: 0;
+  transform: translateX(-400px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.Mushroom-Coffee-Background p:last-child {
+  opacity: 0;
+  transform: translateX(400px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.Mushroom-Coffee-Background.visible p:first-child {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.Mushroom-Coffee-Background.visible p:last-child {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.Established-Texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #562f22;
+    font-family: Poppins;
+}
+
+.Established p{
+    font-weight: bold;
+    font-size: 21.4px;
+    margin: 0;
+    margin-left: 25px; 
+}
+
+.year p{
+    margin: 0;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+
+.Book-an-Event-Part{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: #562f22;
+    font-family: Poppins;
+}
+
+.Book-an-event-Text p{
+    font-weight: bold;
+    font-size: 21.4px;
+    margin: 0;
+    margin-right: 25px;
+
+
+}
+
+.Social-Media-Icons{
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
+
+
+.Social-Media-Icons svg{
+    width: 25px;
+    height: 25px;
+    margin-right: 3px;
+}
+
+/* Social Media Icons Animation */
+.Social-Media-Icons svg {
+  transition: transform 0.3s ease;
+}
+
+.Social-Media-Icons svg:hover {
+  transform: scale(1.2);
+}
+
+
+/* About Page Banner Media Queries */
+@media (max-width: 1525px){
+    .About-Page-Banner{
+      width: 100%; 
+  }
+
+  .Beans-Background img{
+    width: 100%;
+  }
+
+
+  .Mushroom-Coffee-Background{
+    top: -10px;
+    right: 70px;
+  }
+
+  .Mushroom-Coffee-Background p:first-child{
+    font-size: 119px;
+    margin: 0;
+    letter-spacing: 21px;
+  }
+
+  .Mushroom-Coffee-Background p:last-child{
+    font-size: 149px;
+    left: 70px;
+    top: 120px;
+    letter-spacing: 43px;
+  }
+}
+
+@media (max-width: 1524px){
+  .Mushroom-Coffee-Background{
+    top: -10px;
+    right: 290px;
+  }
+}
+
+@media (max-width: 1436px){
+  .Mushroom-Coffee-Background{
+    top: -10px;
+    right: 255px;
+  }
+}
+
+@media (max-width: 1344px){
+  .Mushroom-Coffee-Background{
+    top: -10px;
+    right: 220px;
+  }
+}
+
+@media (max-width: 1252px){
+  .Mushroom-Coffee-Background{
+    top: -10px;
+    right: 185px;
+  }
+}
+
+@media (max-width: 1160px){
+  .Mushroom-Coffee-Background{
+    top: -10px;
+    right: 153px;
+  }
+}
+
+@media (max-width: 1112px){
+  .Mushroom-Coffee-Background{
+    top: -10px;
+    right: 100px;
+  }
+}
+
+
+
+
+/* IPad */
+@media (max-width: 1024px){
+  .Mushroom-Coffee-Background{
+    top: -10px;
+    right: 84px;
+  }
+
+  .Mushroom-Coffee-Background p:first-child{
+    font-size: 119px;
+    margin: 0;
+    letter-spacing: 15px;
+  }
+
+  .Mushroom-Coffee-Background p:last-child{
+    font-size: 140px;
+    left: 48px;
+    top: 120px;
+    letter-spacing: 43px;
+  }
+
+  .Beans-Background img{
+    width: 1024px;
+    height: 530px;
+
+    position: absolute;
+  }
+
+}
+
+@media (max-width: 900px){
+  .Beans-Background img{
+    width: 100%;
+  }
+
+
+  .Mushroom-Coffee-Background{
+    top: -10px;
+    right: 30px;
+  }
+
+  .Mushroom-Coffee-Background p:first-child{
+    letter-spacing: 10px;
+  }
+
+.Mushroom-Coffee-Background p:last-child{
+    letter-spacing: 30px;
+    left: 55px;
+  }
+
+}
+
+
+@media (max-width: 856px){
+  .Mushroom-Coffee-Background{
+    top: -10px;
+    right: 10px;
+  }
+
+
+    .Established p{
+      font-size: 15.4px;
+  }
+
+  .year p{
+      font-size: 11px;
+      margin: 0;
+      margin-left: 25px;
+      margin-bottom: 25px;
+  }
+
+
+
+    .Book-an-Event-Part{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      color: #562f22;
+      font-family: Poppins;
+  }
+
+  .Book-an-event-Text p{
+      font-weight: bold;
+      font-size: 15.4px;
+      margin: 0;
+      margin-right: 25px;
+  }
+
+  .Social-Media-Icons{
+      margin-right: 25px;
+      margin-bottom: 25px;
+  }
+
+
+  .Social-Media-Icons svg{
+      width: 20px;
+      height: 20px;
+      margin-right: 3px;
+  }
+}
+
+
+@media (max-width: 773.60px){
+  
+
+  .Mushroom-Coffee-Background{
+    top: 10px;
+    right: 36px;
+  }
+
+  .Mushroom-Coffee-Background p:first-child{
+    font-size: 100px;
+    letter-spacing: 8px;
+  }
+
+  .Mushroom-Coffee-Background p:last-child{
+    font-size: 121px;
+    letter-spacing: 20px;
+    top: 100px;
+  }
+
+
+  .Established p{
+    font-weight: bold;
+    font-size: 11.4px;
+}
+
+.year p{
+    font-size: 9.7px;
+    margin: 0;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+
+.Book-an-Event-Part{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: #562f22;
+    font-family: Poppins;
+}
+
+.Book-an-event-Text p{
+    font-weight: bold;
+    font-size: 11.4px;
+    margin: 0;
+    margin-right: 25px;
+}
+
+.Social-Media-Icons{
+    margin-right: 25px;
+    margin-bottom: 16px;
+}
+
+
+.Social-Media-Icons svg{
+    width: 14px;
+    height: 14px;
+    margin-right: 3px;
+}
+
+.Drinks img{
+  flex-direction: center;
+  align-items: flex-end;
+  z-index: 1;
+  width: 313px;
+  height: 288px;
+}
+}
+
+@media (max-width: 675.20px){
+  .Mushroom-Coffee-Background{
+    top: 10px;
+    right: 36px;
+  }
+
+  .Mushroom-Coffee-Background p:first-child{
+    font-size: 90px;
+    letter-spacing: 4px;
+  }
+
+  .Mushroom-Coffee-Background p:last-child{
+    font-size: 111px;
+    letter-spacing: 16px;
+    top: 80px;
+  }
+}
+
+@media (max-width: 624px){
+  .Mushroom-Coffee-Background{
+    top: 10px;
+    right: 36px;
+  }
+
+  .Mushroom-Coffee-Background p:first-child{
+    font-size: 85px;
+    letter-spacing: 4px;
+  }
+
+  .Mushroom-Coffee-Background p:last-child{
+    font-size: 111px;
+    letter-spacing: 16px;
+    top: 80px;
+  }
+}
+
+@media (max-width: 600px){
+  .Beans-Background img{
+    width: 100%;
+    height: 258px;
+
+    position: absolute;
+}
+
+
+/* Upper Part of About Page Banner */
+.Upper-Part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.Calle-Mush-Heading p{
+    font-family: Just tell me what;
+    font-size: 50px;
+    color: #562f22;
+    margin: 15px 0px 0px;
+}
+
+
+/* Bottom Part of About Page Banner */
+.Bottom-Part{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+.Drinks img{
+    flex-direction: center;
+    align-items: flex-end;
+    z-index: 1;
+    width: 193px;
+    height: 168px;
+}
+
+
+.Mushroom-Coffee-Background{
+    position: absolute;
+    z-index: 0;
+    font-family: Poppins;
+    font-weight: 900;
+    top: 30px;
+    right: 120px;
+    color: #91542e;
+    opacity: 0.19;
+
+}
+
+.Mushroom-Coffee-Background p:first-child{
+    font-size: 50px;
+    margin: 0;
+    letter-spacing: 4px;
+    line-height: 1px;
+}
+
+.Mushroom-Coffee-Background p:last-child{
+    position: absolute;
+    font-size: 71px;
+    margin: 0;
+    left: 5px;
+    top: 60px;
+    letter-spacing: 11px;
+    line-height: 1px;
+}
+
+
+.Established p{
+    font-weight: bold;
+    font-size: 11.4px;
+}
+
+.year p{
+    font-size: 9.7px;
+    margin: 0;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+
+.Book-an-Event-Part{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: #562f22;
+    font-family: Poppins;
+}
+
+.Book-an-event-Text p{
+    font-weight: bold;
+    font-size: 11.4px;
+    margin: 0;
+    margin-right: 25px;
+}
+
+.Social-Media-Icons{
+    margin-right: 25px;
+    margin-bottom: 16px;
+}
+
+
+.Social-Media-Icons svg{
+    width: 14px;
+    height: 14px;
+    margin-right: 3px;
+}
+}
+
+@media (max-width: 560px){
+  .Mushroom-Coffee-Background{
+    right: 100px;
+  }
+}
+
+@media (max-width: 500px){
+  .Mushroom-Coffee-Background{
+    right: 70px;
+  }
+}
+
+
+/* Phone */
+@media (max-width: 431px){
+  .About-Page-Banner{
+      width: 430px; 
+  }
+
+  .Beans-Background{
+    position: relative;
+  }
+
+  .Beans-Background img{
+      width: 100%;
+      height: 258px;
+
+      position: absolute;
+  }
+
+
+  /* Upper Part of About Page Banner */
+  .Upper-Part{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px;
+  }
+
+  .Calle-Mush-Heading p{
+      font-family: Just tell me what;
+      font-size: 50px;
+      color: #562f22;
+      margin: 15px 0px 0px;
+  }
+
+
+  /* Bottom Part of About Page Banner */
+  .Bottom-Part{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position: relative;
+  }
+
+  .Drinks img{
+      flex-direction: center;
+      align-items: flex-end;
+      z-index: 1;
+      width: 193px;
+      height: 168px;
+  }
+
+
+  .Mushroom-Coffee-Background{
+      position: absolute;
+      z-index: 0;
+      font-family: Poppins;
+      font-weight: 900;
+      top: 30px;
+      right: 42px;
+      color: #91542e;
+      opacity: 0.19;
+
+  }
+
+  .Mushroom-Coffee-Background p:first-child{
+      font-size: 50px;
+      margin: 0;
+      letter-spacing: 4px;
+      line-height: 1px;
+  }
+
+  .Mushroom-Coffee-Background p:last-child{
+      position: absolute;
+      font-size: 71px;
+      margin: 0;
+      left: 5px;
+      top: 60px;
+      letter-spacing: 11px;
+      line-height: 1px;
+  }
+
+
+  .Established p{
+      font-weight: bold;
+      font-size: 11.4px;
+  }
+
+  .year p{
+      font-size: 9.7px;
+      margin: 0;
+      margin-left: 25px;
+      margin-bottom: 25px;
+  }
+
+
+  .Book-an-Event-Part{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      color: #562f22;
+      font-family: Poppins;
+  }
+
+  .Book-an-event-Text p{
+      font-weight: bold;
+      font-size: 11.4px;
+      margin: 0;
+      margin-right: 25px;
+  }
+
+  .Social-Media-Icons{
+      margin-right: 25px;
+      margin-bottom: 16px;
+  }
+
+
+  .Social-Media-Icons svg{
+      width: 14px;
+      height: 14px;
+      margin-right: 3px;
+  }
+}
+
+
+
+
+
+/* Calle Mush's Story Section */
+.Calle-Mush-Story {
+    overflow-x: hidden !important;
+    overflow-y: hidden;
+    width: 1536px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.Coffee-Leaf{
+    width: 313px;
+
+}
+
+.Coffee-Leaf img{
+    position: relative;
+    width: 400px;
+    height: auto;
+    opacity: 0.5;
+    top: -50px;
+    left: -90px;
+    z-index: -1;
+
+  
+}
+
+.Our-Story-Group{
+    text-align: center;
+}
+
+.Our-Story-Group p:first-child{
+    font-family: Just tell me what;
+    font-size: 117px;
+    margin-top: 20px;
+}
+
+.Our-Story-Group p:nth-child(2){
+    font-family: Poppins;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 37px;
+}
+
+.Our-Story-Group p:last-child{
+    font-family: Poppins;
+    font-size: 20px;
+    margin-bottom: 60px;
+}
+
+.Coffee-Cup{
+    display: flex;
+    align-items: flex-end;
+    width: 370px;
+}
+
+.Coffee-Cup img{
+    position: relative;
+    right: -35px;
+    bottom: -50px;
+    width: 517px;
+    height: auto;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+
+
+/* Animations */
+.Coffee-Leaf img,
+.Coffee-Cup img,
+.Our-Story-Group {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.Our-Story-Group p:first-child {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #562f22; /* Blinking cursor */
+  animation: typing 4s steps(30, end), blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #562f22;
+  }
+}
+
+.Our-Story-Group p {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.Our-Story-Group.visible p:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.Our-Story-Group.visible p:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+
+.Our-Story-Group.visible p:nth-child(3) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.9s;
+}
+
+/* When Visible */
+.Coffee-Leaf.visible img {
+  opacity: 1;
+  transform: translateX(-20px);
+}
+
+.Coffee-Cup.visible img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.Our-Story-Group.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.Coffee-Cup img {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Calle Mush's Story Media Queries */
+
+@media (max-width: 1388px){
+  .Calle-Mush-Story {
+      width: 100%;
+      display: flex;
+      gap: 20px; 
+  }
+}
+
+@media (max-width: 1224px){
+    .Calle-Mush-Story {
+        width: 100%;
+    }
+
+    .Our-Story-Group p:first-child{
+      font-family: Just tell me what;
+      font-size: 106px;
+      margin-top: 30px;
+  }
+
+  .Our-Story-Group p:nth-child(2){
+      font-family: Poppins;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 31px;
+  }
+
+  .Our-Story-Group p:last-child{
+      width: 621px;
+      font-size: 20px;
+      margin-bottom: 60px;
+  }
+
+  .Coffee-Leaf img{
+    width: 400px;
+    height: auto;
+    top: -50px;
+    left: -10px;
+    z-index: -1;
+  }
+}
+
+/* IPad */
+@media (max-width: 1024px){
+    .Coffee-Leaf{
+      width: 20%;
+  }
+
+  .Coffee-Leaf img{
+      width: 400px;
+      height: auto;
+      top: -30px;
+      left: -50px;
+      z-index: -1;
+  }
+
+  .Our-Story-Group{
+    text-align: center;
+    width: 621px;
+}
+
+
+  .Our-Story-Group p:first-child{
+      font-family: Just tell me what;
+      font-size: 106px;
+      margin-top: 30px;
+  }
+
+  .Our-Story-Group p:nth-child(2){
+      font-family: Poppins;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 31px;
+  }
+
+  .Our-Story-Group p:last-child{
+      width: 621px;
+      font-size: 20px;
+      margin-bottom: 60px;
+  }
+
+  .Coffee-Cup{
+      display: flex;
+      align-items: flex-end;
+      width: 20%;
+  }
+
+  .Coffee-Cup img{
+      position: relative;
+      right: 93px;
+      bottom: -50px;
+      width: 517px;
+      height: auto;
+      opacity: 0.4;
+      z-index: -1;
+  }
+}
+
+@media (max-width: 876px){
+  .Coffee-Leaf img{
+      width: 360px;
+      height: auto;
+      top: -30px;
+      left: -40px;
+      z-index: -1;
+  }
+
+}
+
+@media (max-width: 772px){
+    .Calle-Mush-Story {
+      width: 100%;
+      display: flex;
+      gap: 20px; 
+  }
+
+  .Coffee-Leaf{
+      width: 20%; 
+  }
+
+  .Coffee-Leaf img{
+      width: 260px;
+      height: auto;
+      top: -25px;
+      left: -35px;
+  }
+
+  .Our-Story-Group{
+      text-align: center;
+      width: 421px;
+  }
+
+  .Our-Story-Group p:first-child{
+      font-family: Just tell me what;
+      font-size: 75px;
+      margin-top: 20px;
+      margin-bottom: 5px;
+  }
+
+  .Our-Story-Group p:nth-child(2){
+      font-family: Poppins;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 27px;
+  }
+
+  .Our-Story-Group p:last-child{
+      font-family: Poppins;
+      font-size: 13px;
+      margin-bottom: 40px;
+      width: 421px;
+  }
+
+  .Coffee-Cup{
+      display: flex;
+      align-items: flex-end;
+      width: 20%; 
+  }
+
+  .Coffee-Cup img{
+      position: relative;
+      right: 75px;
+      bottom: -30px;
+      width: 361px;
+      height: auto;
+      opacity: 0.4;
+      z-index: -1;
+  }
+
+}
+
+@media (max-width: 600px){
+    .Calle-Mush-Story {
+      width: 100%;
+      display: flex;
+      flex-direction: row; 
+      justify-content: center; 
+      gap: 20px; 
+  }
+
+  .Coffee-Leaf{
+      width: 20%; 
+  }
+
+  .Coffee-Leaf img{
+      position: relative;
+      width: 230px;
+      height: auto;
+      opacity: 0.5;
+      top: -25px;
+      left: -25px;
+      z-index: -1;
+  }
+
+  .Our-Story-Group{
+      text-align: center;
+      width: 321px;
+  }
+
+  .Our-Story-Group p:first-child{
+      font-family: Just tell me what;
+      font-size: 55px;
+      margin-top: 20px;
+  }
+
+  .Our-Story-Group p:nth-child(2){
+      font-family: Poppins;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 17px;
+  }
+
+  .Our-Story-Group p:last-child{
+      font-family: Poppins;
+      font-size: 12px;
+      margin-bottom: 40px;
+      width: 321px;
+  }
+
+  .Coffee-Cup{
+      display: flex;
+      align-items: flex-end;
+      width: 20%; 
+  }
+
+  .Coffee-Cup img{
+      position: relative;
+      right: 85px;
+      bottom: -30px;
+      width: 311px;
+      height: auto;
+      opacity: 0.4;
+      z-index: -1;
+  }
+}
+
+/* Phone Size */
+@media (max-width: 431px){
+    .Calle-Mush-Story {
+      width: 430px;
+      display: flex;
+      flex-direction: row; 
+      justify-content: center; 
+      gap: 20px; 
+  }
+
+  .Coffee-Leaf{
+      width: 20%; 
+  }
+
+  .Coffee-Leaf img{
+      position: relative;
+      width: 170px;
+      height: auto;
+      opacity: 0.5;
+      top: -15px;
+      left: 15px;
+      z-index: -1;
+  }
+
+  .Our-Story-Group{
+      text-align: center;
+      width: 311px;
+  }
+
+  .Our-Story-Group p:first-child{
+      font-family: Just tell me what;
+      font-size: 55px;
+      margin-top: 20px;
+  }
+
+  .Our-Story-Group p:nth-child(2){
+      font-family: Poppins;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 17px;
+  }
+
+  .Our-Story-Group p:last-child{
+      font-family: Poppins;
+      font-size: 12px;
+      margin-bottom: 40px;
+      width: 311px;
+  }
+
+  .Coffee-Cup{
+      display: flex;
+      align-items: flex-end;
+      width: 20%; 
+  }
+
+  .Coffee-Cup img{
+      position: relative;
+      right: 85px;
+      bottom: -30px;
+      width: 311px;
+      height: auto;
+      opacity: 0.4;
+      z-index: -1;
+  }
+}
+
+
+
+/* Calle Mush's Values Section */
+.Calle-Mush-Values{
+    overflow-x: hidden !important;
+    width: 1536px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: url("images/Contacts-BG-Texture\ \(2\).png");
+    background-color: #2F1D11;
+    background-repeat: none;
+    background-position: auto;
+}
+
+.Values-Header{
+    text-align: center;
+    font-family: Feeling Passionate;
+    font-size: 85px;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 4px #000000;
+    margin-top: 40px;
+}
+
+/* Innovation */
+.Innovation-Group{
+    display: flex;
+    flex-direction: row;
+    margin-top: 82px;
+}
+
+.Innovation-Group > img{
+    margin-right: 23px;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+.Innovation-Box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 613px;
+    height: auto;
+    padding: 58px;
+    background-color: #FEE8D0;
+    border: 3px solid #562F22;
+    border-radius: 10px;
+
+    font-family: Poppins;
+    color: #562F22;
+
+    position: relative;
+}
+
+
+.Innovation-Box p:first-child{ 
+    font-size: 59px;
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.Innovation-Box p:last-of-type{
+    font-size: 24.9px;
+}
+
+.Light-Bulb-Icon{
+    position: absolute;
+    width: 175px;
+    height: 175px;
+    background-color: #FEE8D0;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #562F22;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    top: -30px;
+    right: -80px;
+}
+
+.Light-Bulb-Icon img{
+    width: 153.25px;
+    height: auto;
+    transform: rotate(-12.86deg);
+}
+
+
+/* Health & Safety */
+.Health-Safety-Group {
+  display: flex;
+  flex-direction: row; 
+  margin-top: 82px;
+}
+
+.Health-Safety-Group > img {
+  margin-left: 23px; 
+  border: 3px solid white; 
+  border-radius: 10px; 
+}
+
+.Health-Safety-Box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 613px;
+  height: auto;
+  padding: 58px;
+  background-color: #FEE8D0;
+  border: 3px solid #562F22;
+  border-radius: 10px;
+
+  font-family: Poppins;
+  color: #562F22;
+  text-align: right;
+
+  position: relative; 
+}
+
+.Health-Safety-Box p:first-of-type { 
+  font-size: 59px;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.Health-Safety-Box p:last-of-type {
+  font-size: 24.9px;
+}
+
+.Shield-Icon {
+  position: absolute;
+  width: 175px;
+  height: 175px;
+  background-color: #FEE8D0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #562F22;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+  top: -30px;
+  left: -80px; 
+}
+
+.Shield-Icon img {
+  width: 142.71px; 
+  height: auto;
+  transform: rotate(12.86deg); 
+}
+
+
+/* Customer-Centric */
+.Customer-Centric-Service-Group{
+  display: flex;
+  flex-direction: row;
+  margin-top: 82px;
+}
+
+.Customer-Centric-Service-Group > img{
+  margin-right: 23px;
+  border: 3px solid white;
+  border-radius: 10px;
+}
+
+.Customer-Centric-Box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 613px;
+  height: auto;
+  padding: 58px;
+  background-color: #FEE8D0;
+  border: 3px solid #562F22;
+  border-radius: 10px;
+
+  font-family: Poppins;
+  color: #562F22;
+
+  position: relative;
+}
+
+
+.Customer-Centric-Box p:first-child{ 
+  font-size: 59px;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.Customer-Centric-Box p:last-of-type{
+  font-size: 24.9px;
+}
+
+.Handshake-Icon{
+  position: absolute;
+  width: 175px;
+  height: 175px;
+  background-color: #FEE8D0;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #562F22;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+  top: -30px;
+  right: -80px;
+}
+
+.Handshake-Icon img{
+  width: 153.25px;
+  height: auto;
+  transform: rotate(-12.86deg);
+}
+
+/* Customer-Centric */
+.Customer-Centric-Service-Group{
+  display: flex;
+  flex-direction: row;
+  margin-top: 82px;
+}
+
+.Customer-Centric-Service-Group > img{
+  margin-right: 23px;
+  border: 3px solid white;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.Customer-Centric-Box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 613px;
+  height: auto;
+  padding: 58px;
+  background-color: #FEE8D0;
+  border: 3px solid #562F22;
+  border-radius: 10px;
+  margin-bottom: 40px;
+
+  font-family: Poppins;
+  color: #562F22;
+
+  position: relative;
+}
+
+
+.Customer-Centric-Box p:first-child{ 
+  font-size: 40px;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.Customer-Centric-Box p:last-of-type{
+  font-size: 24.9px;
+}
+
+.Handshake-Icon{
+  position: absolute;
+  width: 175px;
+  height: 175px;
+  background-color: #FEE8D0;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #562F22;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+  top: -30px;
+  right: -80px;
+}
+
+.Handshake-Icon img{
+  width: 153.25px;
+  height: auto;
+  transform: rotate(-12.86deg);
+}
+
+
+/* Animations for Calle Mush's Values Section */
+
+/* Header */
+.Values-Header {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.Values-Header.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Text Hpver */
+.Innovation-Box p:hover,
+.Health-Safety-Box p:hover,
+.Customer-Centric-Box p:hover {
+  color: #ba7940; /* Change text color */
+  transform: scale(1.05); /* Slight scale-up */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Groups */
+.Innovation-Group,
+.Health-Safety-Group,
+.Customer-Centric-Service-Group {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.Innovation-Group.visible,
+.Health-Safety-Group.visible,
+.Customer-Centric-Service-Group.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Images Hover */
+.Innovation-Group > img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px black; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.Health-Safety-Group > img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px black; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Customer-Centric-Service-Group > img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px black; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Icons */
+.Light-Bulb-Icon img,
+.Shield-Icon img,
+.Handshake-Icon img {
+  transform: scale(0.9);
+  animation: none;
+}
+
+.visible .Light-Bulb-Icon img,
+.visible .Shield-Icon img,
+.visible .Handshake-Icon img {
+  animation: bounce 3s linear;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.Light-Bulb-Icon img:hover,
+.Shield-Icon img:hover,
+.Handshake-Icon img:hover {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+/* Calle Mush's Values Media Queries */
+@media (max-width: 1444px){
+  .Calle-Mush-Values{
+    width: 100%;
+
+    background-image: url("images/Contacts-BG-Texture-iPad.png");
+  }
+
+  .Values-Header{
+      text-align: center;
+      font-family: Feeling Passionate;
+      font-size: 70px;
+      color: #FFFFFF;
+      text-shadow: 1px 1px 4px #000000;
+      margin-top: 70px;
+  }
+
+  /* Innovation */
+  .Innovation-Group{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-top: 82px;
+  }
+
+  .Innovation-Group > img{
+      margin-right: 0px;
+      border: 3px solid white;
+      border-radius: 10px;
+      width: 678px;
+      height: auto;
+  }
+
+  .Innovation-Box{
+      margin-top: 88px;
+      width: 613px;
+      height: auto;
+      padding: 58px;
+      background-color: #FEE8D0;
+      border: 3px solid #562F22;
+      border-radius: 10px;
+
+      font-family: Poppins;
+      color: #562F22;
+
+      position: relative;
+  }
+
+
+  .Innovation-Box p:first-child{ 
+      font-size: 59px;
+      font-weight: 700;
+      font-style: italic;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .Innovation-Box p:last-of-type{
+      font-size: 24.9px;
+  }
+
+  .Light-Bulb-Icon{
+      position: absolute;
+      width: 175px;
+      height: 175px;
+      background-color: #FEE8D0;
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid #562F22;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+      top: -30px;
+      right: -80px;
+  }
+
+  .Light-Bulb-Icon img{
+      width: 153.25px;
+      height: auto;
+      transform: rotate(-12.86deg);
+  }
+
+    /* Health & Safety */
+    .Health-Safety-Group {
+      display: flex;
+      flex-direction: column-reverse; /* Ensures the image is on top */
+      justify-content: space-evenly;
+      align-items: flex-end;
+      margin-top: 82px;
+    }
+  
+    .Health-Safety-Group > img {
+      margin: 0 auto 0px; 
+      border: 3px solid white;
+      border-radius: 10px;
+      width: 678px;
+      height: auto;
+    }
+  
+    .Health-Safety-Box {
+      margin-top: 88px;
+      width: 613px;
+      height: auto;
+      padding: 58px;
+      background-color: #FEE8D0;
+      border: 3px solid #562F22;
+      border-radius: 10px;
+  
+      font-family: Poppins;
+      color: #562F22;
+      position: relative;
+    }
+  
+    /* Customer-Centric */
+    .Customer-Centric-Service-Group {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-top: 82px;
+    }
+  
+    .Customer-Centric-Service-Group > img {
+      margin: 0 auto 0px; 
+      border: 3px solid white;
+      border-radius: 10px;
+      width: 678px;
+      height: auto;
+    }
+  
+    .Customer-Centric-Box {
+      margin-top: 88px;
+      margin-bottom: 88px;
+      width: 613px;
+      height: auto;
+      padding: 58px;
+      background-color: #FEE8D0;
+      border: 3px solid #562F22;
+      border-radius: 10px;
+  
+      font-family: Poppins;
+      color: #562F22;
+      position: relative;
+    }
+}
+
+@media (max-width: 772px){
+  .Calle-Mush-Values{
+    width: 100%;
+  }
+
+  .Values-Header{
+      text-align: center;
+      font-family: Feeling Passionate;
+      font-size: 55px;
+      color: #FFFFFF;
+      text-shadow: 1px 1px 4px #000000;
+      margin-top: 70px;
+  }
+
+  /* Innovation */
+  .Innovation-Group{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-top: 82px;
+  }
+
+  .Innovation-Group > img{
+      margin-right: 0px;
+      border: 3px solid white;
+      border-radius: 10px;
+      width: 578px;
+      height: auto;
+  }
+
+  .Innovation-Box{
+      margin-top: 88px;
+      width: 513px;
+      height: 380px;
+      padding: 58px;
+      background-color: #FEE8D0;
+      border: 3px solid #562F22;
+      border-radius: 10px;
+
+      font-family: Poppins;
+      color: #562F22;
+
+      position: relative;
+  }
+
+
+  .Innovation-Box p:first-child{ 
+      font-size: 49px;
+      font-weight: 700;
+      font-style: italic;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .Innovation-Box p:last-of-type{
+      font-size: 20.9px;
+  }
+
+  .Light-Bulb-Icon{
+      position: absolute;
+      width: 135px;
+      height: 135px;
+      background-color: #FEE8D0;
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid #562F22;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+      top: -30px;
+      right: -67px;
+  }
+
+  .Light-Bulb-Icon img{
+      width: 113.25px;
+      height: auto;
+      transform: rotate(-12.86deg);
+  }
+
+  /* Health & Safety */
+  .Health-Safety-Group {
+    display: flex;
+    flex-direction: column-reverse; /* Image on top */
+    justify-content: space-evenly;
+    margin-top: 82px;
+  }
+
+  .Health-Safety-Group > img {
+    margin: 0 auto;
+    border: 3px solid white;
+    border-radius: 10px;
+    width: 578px;
+    height: auto;
+  }
+
+  .Health-Safety-Box {
+    margin-top: 88px;
+    width: 513px;
+    height: 380px;
+    padding: 58px;
+    background-color: #FEE8D0;
+    border: 3px solid #562F22;
+    border-radius: 10px;
+
+    font-family: Poppins;
+    color: #562F22;
+    position: relative;
+  }
+
+  .Health-Safety-Box p:first-of-type {
+    font-size: 41px;
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .Health-Safety-Box p:last-of-type {
+    font-size: 20.9px;
+  }
+
+  .Shield-Icon {
+    position: absolute;
+    width: 135px;
+    height: 135px;
+    background-color: #FEE8D0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #562F22;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    top: -30px;
+    left: -67px;
+  }
+
+  .Shield-Icon img {
+    width: 113.25px;
+    height: auto;
+    transform: rotate(12.86deg);
+  }
+
+  /* Customer-Centric */
+  .Customer-Centric-Service-Group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 82px;
+  }
+
+  .Customer-Centric-Service-Group > img {
+    margin: 0 auto;
+    border: 3px solid white;
+    border-radius: 10px;
+    width: 578px;
+    height: auto;
+  }
+
+  .Customer-Centric-Box {
+    margin-top: 88px;
+    margin-bottom: 88px;
+    width: 513px;
+    height: 380px;
+    padding: 58px;
+    background-color: #FEE8D0;
+    border: 3px solid #562F22;
+    border-radius: 10px;
+
+    font-family: Poppins;
+    color: #562F22;
+    position: relative;
+  }
+
+  .Customer-Centric-Box p:first-child {
+    font-size: 39px;
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .Customer-Centric-Box p:last-of-type {
+    font-size: 17.9px;
+  }
+
+  .Handshake-Icon {
+    position: absolute;
+    width: 135px;
+    height: 135px;
+    background-color: #FEE8D0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #562F22;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    top: -30px;
+    right: -67px;
+  }
+
+  .Handshake-Icon img {
+    width: 113.25px;
+    height: auto;
+    transform: rotate(-12.86deg);
+  }
+}
+
+@media (max-width: 600px){
+  .Calle-Mush-Values{
+    width: 100%;
+
+    background-image: url("images/Contacts-BG-Texture-iPad.png");
+  }
+
+  .Values-Header{
+      text-align: center;
+      font-family: Feeling Passionate;
+      font-size: 38px;
+      color: #FFFFFF;
+      text-shadow: 1px 1px 4px #000000;
+      margin-top: 35px;
+  }
+
+  /* Innovation */
+  .Innovation-Group{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-top: 35px;
+      align-items: center;
+  }
+
+  .Innovation-Group > img{
+      margin-right: 0px;
+      border: 3px solid white;
+      border-radius: 10px;
+      width: 413px;
+      height: auto;
+  }
+
+  .Innovation-Box{
+      margin-top: 50px;
+      width: 378.74px;
+      height: 256.79px;
+      padding: 33px;
+      background-color: #FEE8D0;
+      border: 3px solid #562F22;
+      border-radius: 10px;
+
+      font-family: Poppins;
+      color: #562F22;
+
+      position: relative;
+  }
+
+
+  .Innovation-Box p:first-child{ 
+      font-size: 37px;
+      font-weight: 700;
+      font-style: italic;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .Innovation-Box p:last-of-type{
+      font-size: 16px;
+  }
+
+  .Light-Bulb-Icon{
+      position: absolute;
+      width: 108.14px;
+      height: 108.14px;
+      background-color: #FEE8D0;
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid #562F22;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+      top: -15px;
+      right: -35px;
+  }
+
+  .Light-Bulb-Icon img{
+      width: 97.18px;
+      height: auto;
+      transform: rotate(-12.86deg);
+  }
+
+  /* Health & Safety */
+  .Health-Safety-Group {
+    display: flex;
+    flex-direction: column-reverse; /* Ensure image is on top */
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 35px;
+  }
+
+  .Health-Safety-Group > img {
+    margin: 0 auto 0px;
+    border: 3px solid white;
+    border-radius: 10px;
+    width: 413px;
+    height: auto;
+  }
+
+  .Health-Safety-Box {
+    margin-top: 50px;
+    width: 378.74px;
+    height: 256.79px;
+    padding: 33px;
+    background-color: #FEE8D0;
+    border: 3px solid #562F22;
+    border-radius: 10px;
+
+    font-family: Poppins;
+    color: #562F22;
+    position: relative; 
+  }
+
+  .Health-Safety-Box p:first-of-type {
+    font-size: 29px;
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .Health-Safety-Box p:last-of-type {
+    font-size: 16px;
+  }
+
+  .Shield-Icon {
+    position: absolute;
+    width: 108.14px;
+    height: 108.14px;
+    background-color: #FEE8D0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #562F22;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    top: -15px;
+    left: -35px;
+  }
+
+  .Shield-Icon img {
+    width: 77.18px;
+    height: auto;
+    transform: rotate(12.86deg);
+  }
+
+  /* Customer-Centric */
+  .Customer-Centric-Service-Group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 35px;
+  }
+
+  .Customer-Centric-Service-Group > img {
+    margin: 0 auto 0px;
+    border: 3px solid white;
+    border-radius: 10px;
+    width: 413px;
+    height: auto;
+  }
+
+  .Customer-Centric-Box {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 378.74px;
+    height: 256.79px;
+    padding: 33px;
+    background-color: #FEE8D0;
+    border: 3px solid #562F22;
+    border-radius: 10px;
+
+    font-family: Poppins;
+    color: #562F22;
+    position: relative;
+  }
+
+  .Customer-Centric-Box p:first-child {
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .Customer-Centric-Box p:last-of-type {
+    font-size: 14px;
+  }
+
+  .Handshake-Icon {
+    position: absolute;
+    width: 108.14px;
+    height: 108.14px;
+    background-color: #FEE8D0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #562F22;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    top: -15px;
+    right: -35px;
+  }
+
+  .Handshake-Icon img {
+    width: 87.18px;
+    height: auto;
+    transform: rotate(-12.86deg);
+  }
+}
+
+/* Phone Size */
+@media (max-width: 431px){
+  .Calle-Mush-Values{
+    width: 100%;
+
+    background-image: url("images/Contacts-BG-Texture-Phone.png");
+  }
+
+  .Values-Header{
+      text-align: center;
+      font-family: Feeling Passionate;
+      font-size: 31px;
+      color: #FFFFFF;
+      text-shadow: 1px 1px 4px #000000;
+      margin-top: 35px;
+  }
+
+  /* Innovation */
+  .Innovation-Group{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-top: 35px;
+      align-items: center;
+  }
+
+  .Innovation-Group > img{
+      margin-right: 0px;
+      border: 3px solid white;
+      border-radius: 10px;
+      width: 343px;
+      height: auto;
+  }
+
+  .Innovation-Box{
+      margin-top: 50px;
+      width: 308.74px;
+      height: 256.79px;
+      padding: 33px;
+      background-color: #FEE8D0;
+      border: 3px solid #562F22;
+      border-radius: 10px;
+
+      font-family: Poppins;
+      color: #562F22;
+
+      position: relative;
+  }
+
+
+  .Innovation-Box p:first-child{ 
+      font-size: 31px;
+      font-weight: 700;
+      font-style: italic;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .Innovation-Box p:last-of-type{
+      font-size: 14px;
+  }
+
+  .Light-Bulb-Icon{
+      position: absolute;
+      width: 88.14px;
+      height: 88.14px;
+      background-color: #FEE8D0;
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid #562F22;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+      top: -15px;
+      right: -35px;
+  }
+
+  .Light-Bulb-Icon img{
+      width: 77.18px;
+      height: auto;
+      transform: rotate(-12.86deg);
+  }
+
+  /* Health & Safety */
+  .Health-Safety-Group {
+    display: flex;
+    flex-direction: column-reverse; /* Ensure image is on top */
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 35px;
+  }
+
+  .Health-Safety-Group > img {
+    margin: 0 auto 0px;
+    border: 3px solid white;
+    border-radius: 10px;
+    width: 343px;
+    height: auto;
+  }
+
+  .Health-Safety-Box {
+    margin-top: 50px;
+    width: 308.74px;
+    height: 277.56px;
+    padding: 33px;
+    background-color: #FEE8D0;
+    border: 3px solid #562F22;
+    border-radius: 10px;
+
+    font-family: Poppins;
+    color: #562F22;
+    position: relative; 
+  }
+
+  .Health-Safety-Box p:first-of-type {
+    font-size: 25px;
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .Health-Safety-Box p:last-of-type {
+    font-size: 14px;
+  }
+
+  .Shield-Icon {
+    position: absolute;
+    width: 88.14px;
+    height: 88.14px;
+    background-color: #FEE8D0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #562F22;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    top: -15px;
+    left: -35px;
+  }
+
+  .Shield-Icon img {
+    width: 77.18px;
+    height: auto;
+    transform: rotate(12.86deg);
+  }
+
+  /* Customer-Centric */
+  .Customer-Centric-Service-Group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 35px;
+  }
+
+  .Customer-Centric-Service-Group > img {
+    margin: 0 auto 0px;
+    border: 3px solid white;
+    border-radius: 10px;
+    width: 343px;
+    height: auto;
+  }
+
+  .Customer-Centric-Box {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 308.74px;
+    height: 285.95px;
+    padding: 33px;
+    background-color: #FEE8D0;
+    border: 3px solid #562F22;
+    border-radius: 10px;
+
+    font-family: Poppins;
+    color: #562F22;
+    position: relative;
+  }
+
+  .Customer-Centric-Box p:first-child {
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .Customer-Centric-Box p:last-of-type {
+    font-size: 14px;
+  }
+
+  .Handshake-Icon {
+    position: absolute;
+    width: 88.14px;
+    height: 88.14px;
+    background-color: #FEE8D0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #562F22;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    top: -15px;
+    right: -35px;
+  }
+
+  .Handshake-Icon img {
+    width: 77.18px;
+    height: auto;
+    transform: rotate(-12.86deg);
+  }
+}
+
+
+/* Calle Mush's Journey Section */
+.Calle-Mush-Journey{
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+  width: 1536px;
+  height: 858px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background-image: url("images/Journey-Background.png");
+}
+
+
+.Calle-Mush-Journey img:first-of-type{
+  position: absolute;
+  left: 520px;
+  top: 270px;
+
+
+}
+
+/* Mushroom and Beans */
+.Calle-Mush-Journey img:nth-of-type(2){
+  position: absolute;
+  left: 404.4px;
+  top: 46.3px;
+
+
+}
+
+/* Coffee Plants */
+.Calle-Mush-Journey img:nth-of-type(3){
+  position: absolute;
+  overflow-y: hidden;
+}
+
+.Our-Journey-Texts{
+  width: 1536px;
+  display: flex;
+  flex-direction: column;
+  
+
+}
+
+.Our-Journey-Texts p:first-child{
+  width: 616px;
+  font-family: Just tell me what;
+  font-size: 117px;
+  color: #562F22;
+  margin-top: 100px;
+  margin-left: 80px;
+
+
+}
+
+.Our-Journey-Texts p:nth-child(2){
+  width: 519px;
+  font-family: Poppins;
+  font-size: 37px;
+  font-style: italic;
+  font-weight: 600;
+  color: #562F22;
+  margin-left: 80px;
+
+
+}
+
+.Our-Journey-Texts p:last-child{
+  width: 439px;
+  font-family: Poppins;
+  font-size: 24px;
+  color: #562F22;
+  margin-left: 80px;
+}
+
+/* Calle Mush's Journey Animations */
+
+/* Texts */
+.Our-Journey-Texts p {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.Our-Journey-Texts p.visible:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.Our-Journey-Texts p.visible:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.Our-Journey-Texts p.visible:nth-child(3) {
+  transition-delay: 0.6s;
+}
+
+.Our-Journey-Texts p.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Images */
+.Calle-Mush-Journey img {
+  opacity: 0;
+  transform: translateY(50px) rotate(-10deg);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.Calle-Mush-Journey img.visible {
+  opacity: 1;
+  transform: translateY(0) rotate(0);
+}
+
+/* Calle Mush's Journey Media Queries */
+
+@media (max-width: 1408px){
+  .Calle-Mush-Journey{
+    width: 100%;
+    height: 584.61px;
+    display: flex;
+    background-image: url("images/Journey-Background.png");
+  }
+  
+  
+  .Calle-Mush-Journey img:first-of-type{
+    position: absolute;
+    left: 440px;
+    top: 168px;
+    width: 446px;
+  }
+  
+  /* Mushroom and Beans */
+  .Calle-Mush-Journey img:nth-of-type(2){
+    position: absolute;
+    left: 260.4px;
+    top: 53.3px;
+    width: 631px;
+  }
+  
+  /* Coffee Plants */
+  .Calle-Mush-Journey img:nth-of-type(3){
+    position: absolute;
+    width: 100%;
+    height: 584.61px;
+  }
+  
+  .Our-Journey-Texts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Our-Journey-Texts p:first-child{
+    width: 470px;
+    font-family: Just tell me what;
+    font-size: 85px;
+    color: #562F22;
+    margin-top: 70px;
+    margin-left: 80px;
+  }
+  
+  .Our-Journey-Texts p:nth-child(2){
+    width: 415px;
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 600;
+    color: #562F22;
+    margin-left: 80px;
+  }
+  
+  .Our-Journey-Texts p:last-child{
+    width: 400px;
+    font-family: Poppins;
+    font-size: 19px;
+    color: #562F22;
+    margin-left: 80px;
+  }
+}
+
+
+/* iPad */
+@media (max-width: 1024px){
+  .Calle-Mush-Journey{
+    width: 100%;
+    height: 584.61px;
+    display: flex;
+    background-image: url("images/Journey-Background.png");
+  }
+  
+  
+  .Calle-Mush-Journey img:first-of-type{
+    position: absolute;
+    left: 440px;
+    top: 168px;
+    width: 446px;
+  }
+  
+  /* Mushroom and Beans */
+  .Calle-Mush-Journey img:nth-of-type(2){
+    position: absolute;
+    left: 260.4px;
+    top: 53.3px;
+    width: 631px;
+  }
+  
+  /* Coffee Plants */
+  .Calle-Mush-Journey img:nth-of-type(3){
+    position: absolute;
+    width: 100%;
+    height: 584.61px;
+  }
+  
+  .Our-Journey-Texts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Our-Journey-Texts p:first-child{
+    width: 470px;
+    font-family: Just tell me what;
+    font-size: 85px;
+    color: #562F22;
+    margin-top: 70px;
+    margin-left: 80px;
+  }
+  
+  .Our-Journey-Texts p:nth-child(2){
+    width: 415px;
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 600;
+    color: #562F22;
+    margin-left: 80px;
+  }
+  
+  .Our-Journey-Texts p:last-child{
+    width: 400px;
+    font-family: Poppins;
+    font-size: 19px;
+    color: #562F22;
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 1008px){
+  .Calle-Mush-Journey img:first-of-type{
+    position: absolute;
+    left: 440px;
+    top: 198px;
+    width: 386px;
+  }
+}
+
+@media (max-width: 860px){
+  .Calle-Mush-Journey{
+    width: 100%;
+    height: 484.61px;
+    display: flex;
+    background-image: url("images/Journey-Background-Var1.png");
+  }
+  
+  
+  .Calle-Mush-Journey img:first-of-type{
+    position: absolute;
+    left: 400px;
+    top: 168px;
+    width: 326px;
+  }
+  
+  /* Mushroom and Beans */
+  .Calle-Mush-Journey img:nth-of-type(2){
+    position: absolute;
+    left: 220.4px;
+    top: 55.3px;
+    width: 511px;
+  }
+  
+  /* Coffee Plants */
+  .Calle-Mush-Journey img:nth-of-type(3){
+    position: absolute;
+    width: 100%;
+    height: 484.61px;
+  }
+  
+  .Our-Journey-Texts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Our-Journey-Texts p:first-child{
+    width: 470px;
+    font-family: Just tell me what;
+    font-size: 65px;
+    color: #562F22;
+    margin-top: 70px;
+    margin-left: 80px;
+  }
+  
+  .Our-Journey-Texts p:nth-child(2){
+    width: 415px;
+    font-family: Poppins;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 600;
+    color: #562F22;
+    margin-left: 80px;
+  }
+  
+  .Our-Journey-Texts p:last-child{
+    width: 390px;
+    font-family: Poppins;
+    font-size: 17px;
+    color: #562F22;
+    margin-left: 80px;
+  }
+}
+
+
+@media (max-width: 772px){
+  .Calle-Mush-Journey{
+    width: 100%;
+    height: 374.61px;
+    display: flex;
+    background-image: url("images/Journey-Background-Var2.png");
+  }
+  
+  
+  .Calle-Mush-Journey img:first-of-type{
+    position: absolute;
+    left: 320px;
+    top: 118px;
+    width: 276px;
+  }
+  
+  /* Mushroom and Beans */
+  .Calle-Mush-Journey img:nth-of-type(2){
+    position: absolute;
+    left: 120.4px;
+    top: 8.3px;
+    width: 461px;
+  }
+  
+  /* Coffee Plants */
+  .Calle-Mush-Journey img:nth-of-type(3){
+    position: absolute;
+    width: 100%;
+    height: 374.61px;
+  }
+  
+  .Our-Journey-Texts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Our-Journey-Texts p:first-child{
+    width: 470px;
+    font-family: Just tell me what;
+    font-size: 45px;
+    color: #562F22;
+    margin-top: 35px;
+    margin-left: 60px;
+  }
+  
+  .Our-Journey-Texts p:nth-child(2){
+    width: 415px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 600;
+    color: #562F22;
+    margin-left: 60px;
+  }
+  
+  .Our-Journey-Texts p:last-child{
+    width: 280px;
+    font-family: Poppins;
+    font-size: 13px;
+    color: #562F22;
+    margin-left: 60px;
+  }
+}
+
+
+@media (max-width: 580px){
+  .Calle-Mush-Journey{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    background-image: url("images/Journey-Background-Var3.png");
+  }
+  
+  
+  .Calle-Mush-Journey img:first-of-type{
+    position: absolute;
+    left: 220px;
+    top: 88px;
+    width: 231px;
+  }
+  
+  /* Mushroom and Beans */
+  .Calle-Mush-Journey img:nth-of-type(2){
+    position: absolute;
+    left: 113.4px;
+    top: 11.3px;
+    width: 363px;
+  }
+  
+  /* Coffee Plants */
+  .Calle-Mush-Journey img:nth-of-type(3){
+    position: absolute;
+    width: 100%;
+    height: 300px;
+  }
+  
+  .Our-Journey-Texts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Our-Journey-Texts p:first-child{
+    width: 220px;
+    font-family: Just tell me what;
+    font-size: 40px;
+    color: #562F22;
+    margin-top: 26px;
+    margin-left: 42px;
+  }
+  
+  .Our-Journey-Texts p:nth-child(2){
+    width: 200px;
+    font-family: Poppins;
+    font-size: 14.5px;
+    font-style: italic;
+    font-weight: 600;
+    color: #562F22;
+    margin-left: 42px;
+  }
+  
+  .Our-Journey-Texts p:last-child{
+    width: 250px;
+    font-family: Poppins;
+    font-size: 10.65px;
+    color: #562F22;
+    margin-left: 42px;
+  }
+}
+
+
+/* Phone Size */
+@media (max-width: 431px){
+  .Calle-Mush-Journey{
+    width: 100%;
+    height: 262px;
+    display: flex;
+    background-image: url("images/Journey-Background-Phone.png");
+  }
+  
+  
+  .Calle-Mush-Journey img:first-of-type{
+    position: absolute;
+    left: 160px;
+    top: 88px;
+    width: 186px;
+  }
+  
+  /* Mushroom and Beans */
+  .Calle-Mush-Journey img:nth-of-type(2){
+    position: absolute;
+    left: 110.4px;
+    top: 28.3px;
+    width: 265px;
+  }
+  
+  /* Coffee Plants */
+  .Calle-Mush-Journey img:nth-of-type(3){
+    position: absolute;
+    width: 100%;
+    height: 262px;
+  }
+  
+  .Our-Journey-Texts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Our-Journey-Texts p:first-child{
+    width: 180px;
+    font-family: Just tell me what;
+    font-size: 35px;
+    color: #562F22;
+    margin-top: 26px;
+    margin-left: 24px;
+  }
+  
+  .Our-Journey-Texts p:nth-child(2){
+    width: 192px;
+    font-family: Poppins;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 600;
+    color: #562F22;
+    margin-left: 24px;
+  }
+  
+  .Our-Journey-Texts p:last-child{
+    width: 200px;
+    font-family: Poppins;
+    font-size: 8.3px;
+    color: #562F22;
+    margin-left: 24px;
+  }
+}
+
+
+
+/* What Sets Calle Mush Apart Section */
+.Calle-Mush-Distinct{
+  overflow-x: hidden !important;
+  width: 1536px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #DCCFC2;
+}
+
+.Distinct-Header{
+  font-family: Poppins;
+  font-size: 80px;
+  font-style: italic;
+  font-weight: 700;
+  color: #562F22;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.Drinks-Images{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+
+.Distinct-Text{
+  text-align: center;
+  font-style: italic;
+  font-family: Poppins;
+  font-size: 27px;
+  color: #562F22;
+
+  margin: 50px 146px 50px;
+}
+
+
+/* Animation for Calle Mush's What Set Us Apart Section */
+
+/* Header */
+.Distinct-Header p {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.Distinct-Header.visible p {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Images */
+.Drinks-Images img {
+  opacity: 0;
+  transform: scale(0.9) translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.Drinks-Images img.visible:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.Drinks-Images img.visible:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+.Drinks-Images img.visible:nth-child(3) {
+  transition-delay: 0.6s;
+}
+
+.Drinks-Images img.visible:nth-child(4) {
+  transition-delay: 0.8s;
+}
+
+.Drinks-Images img.visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+
+/* Images Hover */
+.Drinks-Images img:hover {
+  transform: scale(1.1);
+}
+
+
+/* Text */
+.Distinct-Text p {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.Distinct-Text.visible p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* What Sets Calle Mush Apart Media Queries */
+@media (max-width: 1368px){
+  .Calle-Mush-Distinct{
+    overflow-x: hidden !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DCCFC2;
+  }
+  
+  .Distinct-Header{
+    font-family: Poppins;
+    font-size: 80px;
+    font-style: italic;
+    font-weight: 700;
+    color: #562F22;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+
+@media (max-width: 1024px){
+  .Calle-Mush-Distinct{
+    overflow-x: hidden !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DCCFC2;
+  }
+  
+  .Distinct-Header{
+    font-family: Poppins;
+    font-size: 80px;
+    font-style: italic;
+    font-weight: 700;
+    color: #562F22;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+
+  .Drinks-Images img{
+    width: 246px;
+  }
+  
+  .Distinct-Text{
+    width: 850px;
+    margin: 50px 146px 50px;
+  }
+}
+
+
+@media (max-width: 877.60px){
+  .Calle-Mush-Distinct{
+    overflow-x: hidden !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DCCFC2;
+  }
+  
+  .Distinct-Header{
+    font-family: Poppins;
+    font-size: 57px;
+    font-style: italic;
+    font-weight: 700;
+    color: #562F22;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+
+  .Drinks-Images img{
+    width: 206px;
+  }
+  
+  .Distinct-Text{
+    font-size: 21.5px;
+    width: 691px;
+  
+    margin: 50px 146px 50px;
+  }
+}
+
+
+@media (max-width: 760px){
+  .Distinct-Header{
+    font-family: Poppins;
+    font-size: 57px;
+    font-style: italic;
+    font-weight: 700;
+    color: #562F22;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  
+  .Distinct-Text{
+    font-size: 21.5px;
+    width: 691px;
+  
+    margin: 50px 146px 50px;
+  }
+
+  .Distinct-Header{
+    font-family: Poppins;
+    font-size: 49px;
+    font-style: italic;
+    font-weight: 700;
+    color: #562F22;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .Drinks-Images{
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .Drinks-Images img{
+    width: 216px;
+    height: auto;
+  }
+
+  .Distinct-Text{
+    width: 591px;
+    font-size: 18px;
+    margin: 30px 146px 30px;
+  }
+}
+
+
+@media (max-width: 580px){
+  .Distinct-Header{
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 700;
+    color: #562F22;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .Drinks-Images{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .Drinks-Images img{
+    width: 199px;
+    height: auto;
+
+  }
+
+  .Drinks-Images img:nth-of-type(1) {
+    order: 1; 
+  }
+
+  .Drinks-Images img:nth-of-type(2) {
+    order: 2; 
+  }
+
+  .Drinks-Images img:nth-of-type(4) {
+    order: 3; 
+  }
+  
+  .Drinks-Images img:nth-of-type(3) {
+    order: 4; 
+  }
+  
+  .Distinct-Text{
+    width: 421px;
+    font-size: 16px;
+    margin: 30px 146px 30px;
+  }
+}
+
+
+@media (max-width: 431px){
+  
+  .Distinct-Header{
+    font-family: Poppins;
+    font-size: 35px;
+    font-style: italic;
+    font-weight: 700;
+    color: #562F22;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .Drinks-Images{
+    flex-wrap: wrap;
+  }
+
+  .Drinks-Images img{
+    width: 199px;
+    height: auto;
+  }
+
+  .Drinks-Images img:nth-of-type(1) {
+    order: 1; 
+  }
+
+  .Drinks-Images img:nth-of-type(2) {
+    order: 2; 
+  }
+
+  .Drinks-Images img:nth-of-type(4) {
+    order: 3; 
+  }
+  
+  .Drinks-Images img:nth-of-type(3) {
+    order: 4; 
+  }
+  
+  .Distinct-Text{
+    width: 391px;
+    font-size: 16px;
+    margin: 30px 146px 30px;
+  }
+}
+
+
+/* Calle Mush's Mushroom Section */
+.Calle-Mush-Mushroom{
+  overflow-x: hidden !important;
+  width: 1536px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.Mushroom-Texts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.Mushroom-Texts p:first-child{
+  font-family: Just tell me what;
+  font-size: 105px;
+  text-align: center;
+  line-height: 1;
+  width: 805px;
+}
+
+.Mushroom-Texts p:nth-child(2){
+  font-family: Poppins;
+  font-size: 20px;
+  text-align: center;
+  width: 805px;
+}
+
+
+.Calle-Mush-Icon{
+  margin-left: 60px;
+}
+
+/* Animations for Calle Mush Mushroom Section */
+
+/* Text Animation */
+.Mushroom-Texts p {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.Mushroom-Texts p.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Icon Animation */
+.Calle-Mush-Icon img {
+  opacity: 0;
+  transform: scale(0.5) rotate(-90deg);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.Calle-Mush-Icon img.visible {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+/* Hover Effect for the Icon */
+.Calle-Mush-Icon img:hover {
+  transform: scale(1.1) rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+
+/* Calle Mush Mushroom Media Queries */
+@media (max-width: 1320px){
+  .Calle-Mush-Mushroom{
+    overflow-x: hidden !important;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .Mushroom-Texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+  }
+  
+  .Mushroom-Texts p:first-child{
+    font-family: Just tell me what;
+    font-size: 90px;
+    text-align: center;
+    line-height: 1;
+    width: 705px;
+  }
+  
+  .Mushroom-Texts p:nth-child(2){
+    font-family: Poppins;
+    font-size: 18px;
+    text-align: center;
+    width: 710px;
+  }
+  
+  
+  .Calle-Mush-Icon{
+    width: 500px;
+    margin-left: 60px;
+  }
+}
+
+
+@media (max-width: 1224px){
+  .Calle-Mush-Mushroom{
+    overflow-x: hidden !important;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .Mushroom-Texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .Mushroom-Texts p:first-child{
+    font-family: Just tell me what;
+    font-size: 81px;
+    text-align: center;
+    line-height: 1;
+    width: 640px;
+  }
+  
+  .Mushroom-Texts p:nth-child(2){
+    font-family: Poppins;
+    font-size: 18px;
+    text-align: center;
+    width: 640px;
+  }
+  
+  
+  .Calle-Mush-Icon{
+    margin-left: 0px;
+    width: 500px;
+  }
+}
+
+
+@media (max-width: 1024px){
+  .Calle-Mush-Mushroom{
+    overflow-x: hidden !important;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .Mushroom-Texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .Mushroom-Texts p:first-child{
+    font-family: Just tell me what;
+    font-size: 81px;
+    text-align: center;
+    line-height: 1;
+    width: 533px;
+  }
+  
+  .Mushroom-Texts p:nth-child(2){
+    font-family: Poppins;
+    font-size: 18px;
+    text-align: center;
+    width: 533px;
+  }
+  
+  
+  .Calle-Mush-Icon{
+    margin-left: 0px;
+    width: 400px;
+  }
+}
+
+@media (max-width: 900px){
+  .Calle-Mush-Mushroom{
+    overflow-x: hidden !important;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .Mushroom-Texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .Mushroom-Texts p:first-child{
+    font-family: Just tell me what;
+    font-size: 61px;
+    text-align: center;
+    line-height: 1;
+    width: 433px;
+  }
+  
+  .Mushroom-Texts p:nth-child(2){
+    font-family: Poppins;
+    font-size: 16px;
+    text-align: center;
+    width: 433px;
+  }
+  
+  
+  .Calle-Mush-Icon img{
+    margin-left: 0px;
+    width: 480px;
+  }
+}
+
+
+@media (max-width: 800px){
+  .Calle-Mush-Mushroom{
+    overflow-x: hidden !important;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .Mushroom-Texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    
+  }
+  
+  .Mushroom-Texts p:first-child{
+    font-family: Just tell me what;
+    font-size: 61px;
+    text-align: center;
+    line-height: 1;
+    width: 343px;
+  }
+  
+  .Mushroom-Texts p:nth-child(2){
+    font-family: Poppins;
+    font-size: 15px;
+    text-align: center;
+    width: 343px;
+  }
+  
+  
+  .Calle-Mush-Icon img{
+    margin-left: 0px;
+    width: 450px;
+  }
+}
+
+
+@media (max-width: 684px){
+  .Calle-Mush-Mushroom{
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+  }
+  
+  .Mushroom-Texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center; 
+    margin: 0; 
+    padding: 0; 
+    width: 100%; 
+  }
+  
+  .Mushroom-Texts p:first-child{
+    font-family: Just tell me what;
+    font-size: 60px;
+    text-align: center;
+    line-height: 1;
+    width: 100%;
+  }
+  
+  .Mushroom-Texts p:nth-child(2){
+    font-family: Poppins;
+    font-size: 14px;
+    text-align: center;
+    width: 80%;
+  }
+  
+  
+
+  .Calle-Mush-Icon {
+    margin: 0 auto; 
+    width: 340px;
+  }
+
+  .Calle-Mush-Icon img {
+    display: block; 
+    margin: 0 auto; 
+    width: 340px; 
+  }
+}
+
+
+@media (max-width: 431px){
+  .Calle-Mush-Mushroom{
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+  }
+  
+  .Mushroom-Texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center; 
+    margin: 0; 
+    padding: 0; 
+    width: 100%; 
+  }
+  
+  .Mushroom-Texts p:first-child{
+    font-family: Just tell me what;
+    font-size: 54px;
+    text-align: center;
+    line-height: 1;
+    width: 331px;
+  }
+  
+  .Mushroom-Texts p:nth-child(2){
+    font-family: Poppins;
+    font-size: 14px;
+    text-align: center;
+    width: 355px;
+  }
+  
+  
+  .Calle-Mush-Icon {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto; 
+    width: 300px;
+  }
+
+  .Calle-Mush-Icon img{
+    margin-left: 0px;
+    width: 300px;
+  }
+}
