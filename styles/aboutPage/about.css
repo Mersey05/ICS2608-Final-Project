@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Just tell me what;
+  src: url(/fonts/Just\ tell\ me\ what\ regular\ \(Version\ 2\).otf);
+}
+
+@font-face {
+  font-family: Feeling Passionate;
+  src: url(/fonts/Feeling\ Passionate.otf);
+}
+
 html, body {
     width: 100%;
     height: 100%;
@@ -11,260 +21,272 @@ body {
     padding: 0;
   }
   
-  /* start of header */
-  .menuLine {
-    display: none;
-  }
-  
-  .mainNav {
-    background-color: #dccfc2;
-    height: 100px;
-    width: 100vw;
-    z-index: 1000;
-    position: fixed;
-    transition: opacity 0.6s ease, visibility 0.6s ease;
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  
-  
-  .mainNav.hidden {
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-  .mainNavContainer {
-    width: 100% !important;
-    height: 100% !important;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .navContainerLeft {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 35% !important;
-    height: 100px;
-  }
-  
-  .navItemsLeft {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .navItems a {
-    font-family: Poppins;
-    font-weight: 600;
-    color: #562f22;
-    text-decoration: none;
-    position: relative;
-  }
-  
-  .navItems a::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2.5px;
-    bottom: 0;
-    left: 0;
-    background-color: #562f22;
-    transition: transform 0.25s ease-out;
-  }
-  
-  .navItems a:hover::after {
-    transform: scaleX(1);
-  }
-  
-  .navItems a::after {
-    transform-origin: bottom center;
-  }
-  
-  .navItems a:hover::after {
-    transform-origin: bottom center;
-  }
-  
-  .navItems {
-    list-style: none;
-  }
-  
-  .navContainerRight {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 35% !important;
-    height: 100px;
-  }
-  
-  .logoContainer {
-    width: 115px !important;
-    height: 115px !important;
-    border-radius: 50%;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .logoImage {
-    height: 110px;
-  }
-  
-  .bookButton {
-    background-color: #8e6c57;
-    padding: 7px 15px 7px 15px;
-    border-radius: 30px;
-    border: none;
-    display: flex;
-    align-items: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-  }
-  
-  .bookButton:hover {
-    background-color: #856450;
-    box-shadow: 0 0 20px #6fc5ff50;
-    transform: scale(1.1);
-  }
-  
-  .bookButtonText {
-    font-family: Poppins;
-    font-size: 16px;
-    color: white;
-  }
-  
-  .bookingIcon {
-    height: 35px;
-  }
-  
-  .ipadSidebar {
-    width: 50% !important;
-  }
-  
-  .sidebarTop {
-    height: 80px;
-    width: 93% !important;
-    margin-top: 12px;
-    border-radius: 16px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  
-  .sideLogoContainer {
-    background-color: #eeeeee;
-    width: 65px !important;
-    height: 65px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
-  }
-  
-  .sideBarText {
-    display: flex;
-    height: 80px;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .sideLogoImage {
-    height: 75px;
-  }
-  
-  .sideBarMain {
-    font-family: Just tell me what;
-    font-size: 30px;
-    line-height: 28px;
-    margin: 0;
-    margin-top: 6px;
-    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
-  }
-  
-  .sideBarSub {
-    font-family: Poppins;
-    font-size: 16px;
-    margin: 0;
-    margin-left: 3px;
-    color: #ba7940;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-  
-  .sideBarItems {
-    margin-top: 60px;
-  }
-  
-  .sideBarItems ul li {
-    list-style: none;
-    height: 60px;
-    width: 40vw;
-    display: flex;
-    align-items: center;
-    transition: 0.3s;
-  }
-  
-  .sideBarItems ul li:hover {
-    background-color: rgba(211, 211, 211, 0.5);
-  }
-  
-  .sideBarItems ul li a {
-    text-decoration: none;
-    font-family: Poppins;
-    color: black;
-    font-weight: 500;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-  
-  .sideBarItems ul {
-    height: 40vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-left: 16px !important;
-  }
-  
-  .sideBarItems ul img {
-    width: 40vw;
-    height: 1px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .sideBarItems ul li a img {
-    height: 25px;
-    width: 25px;
-    margin-right: 20px;
-    margin-left: 10px;
-  }
-  
-  .sideBarContainer {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .sideBarContainer button {
-    margin-top: 20px;
-    padding: 6px 60px 6px 60px;
-    align-self: center;
-    border: none;
-    border-radius: 30px;
-    background-color: #8e6c57;
-    color: white;
-    font-weight: 400;
-    font-size: 18px;
-    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-  
-  
-  
-  /* end of header */
+/* start of header */
+.menuLine {
+  display: none;
+}
+
+.mainNav {
+  background-color: #dccfc2;
+  height: 100px;
+  width: 100vw;
+  z-index: 1000;
+  position: fixed;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+.mainNav.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.mainNavContainer {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex;
+  justify-content: center;
+}
+
+.navContainerLeft {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 35% !important;
+  height: 100px;
+}
+
+.navItemsLeft {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navItems a {
+  font-family: Poppins;
+  font-weight: 600;
+  color: #562f22;
+  text-decoration: none;
+  position: relative;
+}
+
+.navItems a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2.5px;
+  bottom: 0;
+  left: 0;
+  background-color: #562f22;
+  transition: transform 0.25s ease-out;
+}
+
+.navItems a:hover::after {
+  transform: scaleX(1);
+}
+
+.navItems a::after {
+  transform-origin: bottom center;
+}
+
+.navItems a:hover::after {
+  transform-origin: bottom center;
+}
+
+.navItems {
+  list-style: none;
+}
+
+.navContainerRight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 35% !important;
+  height: 100px;
+}
+
+.navContainerRight a {
+  text-decoration: none;
+}
+
+.logoContainer {
+  width: 115px !important;
+  height: 115px !important;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoImage {
+  height: 110px;
+}
+
+.bookButton {
+  background-color: #8e6c57;
+  padding: 7px 15px;
+  border-radius: 30px;
+  border: none;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s;
+  gap: 8px;
+  -webkit-transition: all 0.5s;
+}
+
+.bookButton:hover {
+  background-color: #856450;
+  box-shadow: 0 0 20px #6fc5ff50;
+  transform: scale(1.1);
+}
+
+.bookButton:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #7b5d49;
+  transition: transform 0.3s, background-color 0.1s;
+}
+
+.bookButtonText {
+  font-family: Poppins;
+  font-size: 16px;
+  color: white;
+}
+
+.bookingIcon {
+  height: 35px;
+}
+
+.ipadSidebar {
+  width: 50% !important;
+}
+
+.sidebarTop {
+  height: 80px;
+  width: 93% !important;
+  margin-top: 12px;
+  border-radius: 16px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sideLogoContainer {
+  background-color: #eeeeee;
+  width: 65px !important;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.sideBarText {
+  display: flex;
+  height: 80px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sideLogoImage {
+  height: 75px;
+}
+
+.sideBarMain {
+  font-family: Just tell me what;
+  font-size: 30px;
+  line-height: 28px;
+  margin: 0;
+  margin-top: 6px;
+  text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sideBarSub {
+  font-family: Poppins;
+  font-size: 16px;
+  margin: 0;
+  margin-left: 3px;
+  color: #ba7940;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sideBarItems {
+  margin-top: 60px;
+}
+
+.sideBarItems ul li {
+  list-style: none;
+  height: 60px;
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.sideBarItems ul li:hover {
+  background-color: rgba(211, 211, 211, 0.5);
+}
+
+.sideBarItems ul li a {
+  text-decoration: none;
+  font-family: Poppins;
+  color: black;
+  font-weight: 500;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sideBarItems ul {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 16px !important;
+}
+
+.sideBarItems ul img {
+  width: 40vw;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+.sideBarItems ul li a img {
+  height: 25px;
+  width: 25px;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+.sideBarContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.sideBarContainer button {
+  margin-top: 20px;
+  padding: 6px 60px 6px 60px;
+  align-self: center;
+  border: none;
+  border-radius: 30px;
+  background-color: #8e6c57;
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* end of header */
   
   /* header media queries start */
   @media (max-width: 1024px) {
